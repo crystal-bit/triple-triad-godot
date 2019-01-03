@@ -7,7 +7,7 @@ I loved FFVIII.
 I loved Triple Triad.  
 I had this question: *"How difficult it is to recreate the Triple Triad card game with Godot Engine?"*
 
-This repository is the answer to my question: the core of the game has been developed during Devember2018 (a challenge where
+This repository is the answer to my question: the core of the game has been developed during [my Devember 2018 challenge](https://davcri.github.io/posts/devember2018-retrospective/) (a challenge where
 you have to code each day of December for at least 1 hour).
 
 ## How to run the game
