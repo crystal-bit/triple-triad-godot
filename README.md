@@ -64,7 +64,7 @@ You can contribute in different ways:
 Before working on anything, I want to make sure that no-one is working
 on the same thing at the same time so please feel free to:
 
-- open an issue on Github
+- [open an issue](https://github.com/crystal-bit/triple-triad-godot/issues/new)
 - get in touch [on Twitter](https://twitter.com/dav__cri) 
 
 **Note**: I really would like to keep improving and expanding this
