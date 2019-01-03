@@ -8,18 +8,23 @@ I had this question: *"How difficult it is to recreate the Triple Triad card gam
 This repository is the answer to my question: the core of the game has been developed during Devember2018 (a challenge where
 you have to code each day of December for at least 1 hour).
 
+## How to run the game
 
-## File organization
+You can download a prebuilt executable:
 
-- `GameScenes`: contains every scene of the game. Each scene is placed in its own folder (with the same name). Each folder can contain:
-    - the scene file (`.tscn`)
-    - local assets (files that are used only in this specific scene)
-    - local scripts (scripts that are used only in this specific scene)
-    - (optional) local child scenes
-- `NodeScenes` (maybe better name: `GameNodes`): reusable node scenes that can be used by `GameScenes`. Each node is placed in its own folder (with the same name). Each folder can contain:
-    - scene file
-    - assets
-    - scripts
+- Windows:
+- OSX: 
+- Linux: 
+
+Or you can:
+
+1. [Download Godot Engine](https://godotengine.org/download/) (the game was developer with v3.0.6)
+2. Download this project
+3. Launch Godot Engine
+4. Import the project into Godot
+   1. Select `Scan`
+   2. Select the project folder
+   3. Double click on Triple Triad
 
 ## TODO
 
@@ -31,21 +36,22 @@ you have to code each day of December for at least 1 hour).
 
 ## Contributing
 
-Contributing for me means:
+You can contribute in different ways:
 
-- saying me what you think about this project 
-- tweet about this project
-- talk with your friends about this project
 - download this game and try it
+- talk with your friends about this project
+- tell me your opinions about this project
+- tweet about this project
 - report bugs
 - make Pull Requests to improve it or add new features
+
+### Code contributions
 
 Before working on anything, I want to make sure that no-one is working
 on the same thing at the same time so please feel free to:
 
 - open an issue on Github
 - get in touch on Twitter 
-
 
 **Note**: I really would like to keep improving and expanding this
 project, I love TripleTriad and would love to add other features (eg: online multiplayer matches)
