@@ -24,18 +24,19 @@ func _process(delta):
 	set_process(false)  # this NEEDS to be called before the yield
 	# wait
 	yield(get_tree().create_timer(1), "timeout")
-	# get card container
-	var card_container = get_random_card_container()
-	# flip card
-	card_container.get_child(0).set_covered(false)
-	# get a random position to play the card
-	var rand_position = field.get_random_empty_container()
-	# play the card
-	field.add_card_at_position(card_container, rand_position)
-	# play sound
-	get_parent().get_node("GameLogic/SelectionPointer/Audio/CardMove").play()
-	# finish turn
-	emit_signal("turn_finished", rand_position)
+	if field.cards_played < 9:
+		# get card container
+		var card_container = get_random_card_container()
+		# flip card
+		card_container.get_child(0).set_covered(false)
+		# get a random position to play the card
+		var rand_position = field.get_random_empty_container()
+		# play the card
+		field.add_card_at_position(card_container, rand_position)
+		# play sound
+		get_parent().get_node("GameLogic/SelectionPointer/Audio/CardMove").play()
+		# finish turn
+		emit_signal("turn_finished", rand_position)
 	
 func get_card_container_at(index):
 	""" Get a Card node given an integer index
