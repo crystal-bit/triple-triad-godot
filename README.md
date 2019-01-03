@@ -55,7 +55,7 @@ You can contribute in different ways:
 - download this game and try it
 - talk with your friends about this project
 - tell me your opinions about this project
-- tweet about this project
+- [tweet](https://twitter.com/dav__cri) about this project
 - report bugs
 - make Pull Requests to improve it or add new features
 
@@ -65,7 +65,7 @@ Before working on anything, I want to make sure that no-one is working
 on the same thing at the same time so please feel free to:
 
 - open an issue on Github
-- get in touch on Twitter 
+- get in touch [on Twitter](https://twitter.com/dav__cri) 
 
 **Note**: I really would like to keep improving and expanding this
 project, I love TripleTriad and would love to add other features (eg: online multiplayer matches)
