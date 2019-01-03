@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://GameScenes/Battle/Battle.tscn" type="PackedScene" id=1]
 [ext_resource path="res://GameScenes/Battle/Audio/Shuffle or Boogie.wav" type="AudioStream" id=2]
@@ -6,7 +6,6 @@
 [ext_resource path="res://GameScenes/Game/Fonts/ChakraPetch-Bold.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://GameScenes/Game/Fonts/ChakraPetch-Regular.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://GameScenes/Game/Textures/logo-crystalbit.png" type="Texture" id=6]
-[ext_resource path="res://GameScenes/Game/Textures/davcri.github.io-bitly.png" type="Texture" id=7]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -77,10 +76,11 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 675.0
-margin_top = -1354.0
-margin_right = 2243.0
-margin_bottom = -78.0
+margin_left = 1570.0
+margin_top = -3.0
+margin_right = 3138.0
+margin_bottom = 1579.0
+rect_scale = Vector2( 0.8, 0.8 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = true
 mouse_filter = 0
@@ -96,9 +96,13 @@ I appreciate when people get in touch, it's a nice way to give support!
 Feel free to share your opinions, feedback and suggestions:
 
 - [b]Twitter[/b]: https://twitter.com/dav__cri
-- [b]Instagram[/b]: https://twitter.com/dav__cri
-- [b]YouTube [ITA-only][/b]: https://twitter.com/dav__cri
+- [b]Blog[/b]: https://davcri.github.io/
 - [b]email[/b]: davcri91@gmail.com
+
+You can find me also here:
+
+- [b]YouTube [ITA-only][/b]: https://twitter.com/dav__cri
+- [b]Instagram[/b]: https://www.instagram.com/crystal_bit/
 
 If you want to support me in other ways, you can buy me a coffee (I'm a coffee lover):
 
@@ -114,9 +118,13 @@ I appreciate when people get in touch, it's a nice way to give support!
 Feel free to share your opinions, feedback and suggestions:
 
 - Twitter: https://twitter.com/dav__cri
-- Instagram: https://twitter.com/dav__cri
-- YouTube [ITA-only]: https://twitter.com/dav__cri
+- Blog: https://davcri.github.io/
 - email: davcri91@gmail.com
+
+You can find me also here:
+
+- YouTube [ITA-only]: https://twitter.com/dav__cri
+- Instagram: https://www.instagram.com/crystal_bit/
 
 If you want to support me in other ways, you can buy me a coffee (I'm a coffee lover):
 
@@ -127,57 +135,12 @@ scroll_active = false
 scroll_following = false
 selection_enabled = false
 override_selected_font_color = false
-_sections_unfolded = [ "BBCode", "Visibility", "custom_constants", "custom_fonts" ]
-
-[node name="QRCodeDescription" type="RichTextLabel" parent="MoreInfo" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 75.0
-margin_top = -277.0
-margin_right = 718.0
-margin_bottom = -11.0
-rect_scale = Vector2( 0.8, 0.8 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = true
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-custom_fonts/italics_font = SubResource( 1 )
-custom_fonts/bold_font = SubResource( 2 )
-custom_fonts/normal_font = SubResource( 3 )
-bbcode_enabled = true
-bbcode_text = "[center][u]davcri.github.io[/u]
-Scan the QR code 
-(it's a bitly link)
-[/center]"
-visible_characters = -1
-percent_visible = 1.0
-meta_underlined = true
-tab_size = 4
-text = "davcri.github.io
-Scan the QR code 
-(it's a bitly link)
-"
-scroll_active = false
-scroll_following = false
-selection_enabled = false
-override_selected_font_color = false
 _sections_unfolded = [ "BBCode", "Rect", "Visibility", "custom_constants", "custom_fonts" ]
 
-[node name="Logo" type="Sprite" parent="MoreInfo" index="2"]
+[node name="Logo" type="Sprite" parent="MoreInfo" index="1"]
 
-position = Vector2( 328.732, -1105.98 )
+position = Vector2( 1808.69, -297.693 )
 scale = Vector2( 0.820409, 0.820409 )
 texture = ExtResource( 6 )
-
-[node name="QRCodeToMyWebsite" type="Sprite" parent="MoreInfo" index="3"]
-
-position = Vector2( 327.768, -578.273 )
-scale = Vector2( 2.36063, 2.36063 )
-texture = ExtResource( 7 )
 
 

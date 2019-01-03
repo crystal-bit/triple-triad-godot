@@ -20,12 +20,6 @@
 [ext_resource path="res://Globals/Textures/cardstext_13-edit.png" type="Texture" id=18]
 [ext_resource path="res://GameScenes/Battle/Scripts/ScoreTexture.gd" type="Script" id=19]
 
-
-
-
-
-
-
 [sub_resource type="AtlasTexture" id=1]
 
 flags = 4
@@ -59,7 +53,7 @@ region = Rect2( 0, 190, 100, 100 )
 margin = Rect2( 0, 0, 0, 0 )
 filter_clip = false
 
-[node name="Battle" type="Control" index="0"]
+[node name="Battle" type="Control"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -766,9 +760,9 @@ expand = true
 stretch_mode = 0
 script = ExtResource( 19 )
 
-[connection signal="turn_finished" from="Player2Cards" to="GameLogic/SelectionPointer" method="_on_Player2Cards_turn_finished"]
-
 [connection signal="turn_finished" from="Player2Cards" to="GameLogic" method="_on_Player2Cards_turn_finished"]
+
+[connection signal="turn_finished" from="Player2Cards" to="GameLogic/SelectionPointer" method="_on_Player2Cards_turn_finished"]
 
 [connection signal="player_captured_a_card" from="GameLogic" to="Scores" method="_on_GameLogic_player_captured_a_card"]
 
@@ -778,11 +772,11 @@ script = ExtResource( 19 )
 
 [connection signal="change_to_idle_state" from="GameLogic/SelectionPointer/State/CardSelected" to="GameLogic/SelectionPointer" method="_on_CardSelected_change_to_idle_state"]
 
-[connection signal="place_card" from="GameLogic/SelectionPointer/State/CardSelected" to="Player2Cards" method="_on_CardSelected_place_card"]
-
 [connection signal="place_card" from="GameLogic/SelectionPointer/State/CardSelected" to="Player1Cards" method="_on_CardSelected_place_card"]
 
 [connection signal="place_card" from="GameLogic/SelectionPointer/State/CardSelected" to="GameLogic" method="_on_CardSelected_place_card"]
+
+[connection signal="place_card" from="GameLogic/SelectionPointer/State/CardSelected" to="Player2Cards" method="_on_CardSelected_place_card"]
 
 [connection signal="return_to_card_selection" from="GameLogic/SelectionPointer/State/CardSelected" to="GameLogic/SelectionPointer" method="_on_CardSelected_return_to_card_selection"]
 
