@@ -126,6 +126,7 @@ _sections_unfolded = [ "Margin", "Transform" ]
 
 [node name="Field" type="GridContainer" parent="." index="1"]
 
+editor/display_folded = true
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -629,6 +630,8 @@ _sections_unfolded = [ "Material", "Rect", "Textures", "Visibility" ]
 
 [node name="State" type="Node" parent="GameLogic/SelectionPointer" index="0"]
 
+editor/display_folded = true
+
 [node name="SelectingCard" type="Node" parent="GameLogic/SelectionPointer/State" index="0"]
 
 script = ExtResource( 11 )
@@ -649,6 +652,8 @@ field_path = NodePath("../../../../Field")
 script = ExtResource( 13 )
 
 [node name="Audio" type="Node" parent="GameLogic/SelectionPointer" index="1"]
+
+editor/display_folded = true
 
 [node name="CursorMove" type="AudioStreamPlayer" parent="GameLogic/SelectionPointer/Audio" index="0"]
 
@@ -768,9 +773,9 @@ expand = true
 stretch_mode = 0
 script = ExtResource( 20 )
 
-[connection signal="turn_finished" from="Player2Cards" to="GameLogic/SelectionPointer" method="_on_Player2Cards_turn_finished"]
-
 [connection signal="turn_finished" from="Player2Cards" to="GameLogic" method="_on_Player2Cards_turn_finished"]
+
+[connection signal="turn_finished" from="Player2Cards" to="GameLogic/SelectionPointer" method="_on_Player2Cards_turn_finished"]
 
 [connection signal="player_captured_a_card" from="GameLogic" to="Scores" method="_on_GameLogic_player_captured_a_card"]
 
@@ -780,9 +785,9 @@ script = ExtResource( 20 )
 
 [connection signal="change_to_idle_state" from="GameLogic/SelectionPointer/State/CardSelected" to="GameLogic/SelectionPointer" method="_on_CardSelected_change_to_idle_state"]
 
-[connection signal="place_card" from="GameLogic/SelectionPointer/State/CardSelected" to="GameLogic" method="_on_CardSelected_place_card"]
-
 [connection signal="place_card" from="GameLogic/SelectionPointer/State/CardSelected" to="Player1Cards" method="_on_CardSelected_place_card"]
+
+[connection signal="place_card" from="GameLogic/SelectionPointer/State/CardSelected" to="GameLogic" method="_on_CardSelected_place_card"]
 
 [connection signal="place_card" from="GameLogic/SelectionPointer/State/CardSelected" to="Player2Cards" method="_on_CardSelected_place_card"]
 

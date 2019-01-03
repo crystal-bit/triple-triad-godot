@@ -75,14 +75,16 @@ func capture():
 
 func _load_cards_data_from_json():
 	var file = File.new()
-	file.open(CARDS_DATA_PATH, file.READ)
+	var exit_code = file.open(CARDS_DATA_PATH, file.READ)
+	if exit_code != 0:
+		print("Error", exit_code, "while opening", CARDS_DATA_PATH)
 	var file_data = file.get_as_text()
 	var error_str = validate_json(file_data)
 	if not error_str:
 		# JSON is valid
 		return parse_json(file_data)
 	else:
-	    prints("Invalide JSON\n", error_str)
+	    prints("Invalid JSON\n", error_str)
 
 func set_covered(is_covered):
 	covered = is_covered
