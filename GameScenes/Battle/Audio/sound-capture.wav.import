@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/sound-capture.wav-a9c09f5650096f3c35b2733eafff88e5.sample"
+
+[deps]
+
+source_file="res://GameScenes/Battle/Audio/sound-capture.wav"
+dest_files=[ "res://.import/sound-capture.wav-a9c09f5650096f3c35b2733eafff88e5.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

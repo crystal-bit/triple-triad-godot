@@ -1,0 +1,128 @@
+X:Y   Item Description
+X=    How many cards you have to use    (Example) 1:5   Screws - every 1 card nets you 5 screws
+Y=    How many items you will get back  (Example) 4:1   Rune Armlet - every 4 cards nets you 1 Rune Armlet
+==========================================================================================================
+==========================================================================================================
+Card                                Power       Card      Card                     
+Lvl  Name             Type      N   E   S   W   Element   Location                 Card Modification
+==========================================================================================================
+1    Geezard          Monster   1   4   5   1   N/A       Geezard                  1:5   Screws
+1    Fungar           Monster   5   1   1   3   N/A       Fungar                   1:1   Magic Stone Piece
+1    Bite Bug         Monster   1   3   3   5   N/A       Bite Bug                 1:1   Magic Stone Piece
+1    Red Bat          Monster   6   1   1   2   N/A       Red Bat                  1:1   Vampire Fang
+1    Blobra           Monster   2   3   1   5   N/A       Blobra                   4:1   Rune Armlet
+1    Gayla            Monster   2   1   4   4   Thunder   Gayla                    1:1   Mystery Fluid
+1    Gesper           Monster   1   5   4   1   N/A       Gesper                   1:1   Black Hole
+1    Fastitocalon-F   Monster   3   5   2   1   Earth     Fastitocalon-F           5:1   Water Crystal
+1    Blood Soul       Monster   2   1   6   1   N/A       Blood Soul               1:1   Zombie Powder
+1    Caterchipillar   Monster   4   2   4   3   N/A       Caterchipillar           1:1   Spider Web
+1    Cockatrice       Monster   6   1   2   6   Thunder   Cockatrice               1:1   Cockatrice Pinion
+==========================================================================================================
+2    Grat             Monster   7   1   3   1   N/A       Grat                     1:1   Magic Stone
+2    Buel             Monster   6   2   2   3   N/A       Buel                     1:1   Magic Stone
+2    Mesmerize        Monster   5   3   3   4   N/A       Mesmerize                1:1   Mesmerize Blade
+2    Glacial Eye      Monster   6   1   4   3   Ice       Glacial Eye              1:1   Arcic Wind
+2    Belhelmel        Monster   3   4   5   3   N/A       Belhelmel                1:1   Saw Blade
+2    Thrustaevis      Monster   5   3   2   5   Wind      Thrustaevis              1:1   Shear Feather
+2    Anacondaur       Monster   5   1   3   5   Poison    Anacondaur               1:1   Venom Fang
+2    Creeps           Monster   5   2   5   2   Thunder   Creeps                   1:1   Coral Fragment
+2    Grendel          Monster   4   4   5   2   Thunder   Grendel                  1:1   Dragon Fin
+2    Jelleye          Monster   3   2   1   7   N/A       Jelleye                  1:1   Magic Stone
+2    Grand Mantis     Monster   5   2   5   3   N/A       Grand Mantis             1:1   Sharp Spike
+==========================================================================================================
+3    Forbidden        Monster   6   6   3   2   N/A       Forbidden                1:1   Betrayal Sword
+3    Armadodo         Monster   6   3   1   6   Earth     Armadodo                 1:1   Dino Bone
+3    TriFace          Monster   3   5   5   5   Poison    TriFace                  1:1   Curse Spike
+3    Fastitcalon      Monster   7   5   1   3   Earth     Fastitcalon              1:1   Water Crystal
+3    Snow Lion        Monster   7   1   5   3   Ice       Snow Lion                1:1   North Wind
+3    Ochu             Monster   5   6   3   3   N/A       Ochu                     1:1   Ochu Tentacle
+3    SAM08G           Monster   5   6   2   4   Fire      SAM08G                   1:1   Running Fire
+3    Death Claw       Monster   4   4   7   2   Fire      Death Claw               1:1   Sharp Spike
+3    Cactaur          Monster   6   2   6   3   N/A       Cactaur                  1:1   Cactus Thorn
+3    Tonberry         Monster   3   6   4   4   N/A       Tonberry                 1:1   Chef's Knife
+3    Abyss Worm       Monster   7   2   3   5   Earth     Abyss Worm               1:1   Windmill
+==========================================================================================================
+4    Turtapod         Monster   2   3   6   7   N/A       Turtapod                 5:1   Healing Mail
+4    Vysage           Monster   6   5   4   5   N/A       Vysage,Lefty,Righty      1:1   Wizard Stone
+4    T-Rexaur         Monster   4   6   2   7   N/A       T-Rexaur                 2:1   Dino Bone
+4    Bomb             Monster   2   7   6   3   Fire      Bomb                     1:1   Bomb Fragment
+4    Blitz            Monster   1   6   4   7   Thunder   Blitz                    1:1   Dynamo Stone
+4    Wendigo          Monster   7   3   1   6   N/A       Wendigo                  1:1   Steel Orb
+4    Torama           Monster   7   4   4   4   N/A       Torama                   5:1   Life Ring
+4    Imp              Monster   3   7   3   6   N/A       Imp                      1:1   Wizard Stone
+4    Blue Dragon      Monster   6   2   7   3   Poison    Blue Dragon              4:1   Fury Fragment
+4    Adamantiose      Monster   4   5   5   6   Earth     Adamantiose              3:1   Turtle Shell
+4    Hexadragon       Monster   7   5   4   3   Fire      Hexadragon               3:1   Red Fang
+==========================================================================================================
+5    Iron Giant       Monster   6   5   6   5   N/A       Iron Giant               3:1   Star Fragment
+5    Behemoth         Monster   3   6   5   7   N/A       Behemoth                 10:1  Barrier
+5    Chimera          Monster   7   6   5   3   Water     Chimera                  10:1  Regen Ring
+5    PuPu             Monster   3   A   2   1   N/A       PuPu                     1:1   Hungry Cookpot
+5    Elastiod         Monster   6   2   6   7   N/A       Elastiod                 1:1   Steel Pipe
+5    GIM47N           Monster   5   5   7   4   N/A       GIM47N                   1:10  Fast Ammo
+5    Malboro          Monster   7   7   4   2   Poison    Malboro                  4:1   Malboro Tentacle
+5    Ruby Dragon      Monster   7   2   7   4   Fire      Ruby Dragon              10:1  Inferno Fang
+5    Elnoyle          Monster   5   3   7   6   N/A       Elnoyle                  10:1  Energy Crystal
+5    Tonberry King    Monster   4   6   7   4   N/A       Fatitocalon,Malboro      1:1   Chefs Knife
+5    Wedge, Biggs     Monster   6   6   2   7   N/A       Snow Lion,Fungaur        1:1   X-Potion
+==========================================================================================================
+6    Fujin, Raijin    Boss      2   8   8   4   N/A       Iron Giant,Jelleye       1:1   X-Potion
+6    Elvoret          Boss      7   8   3   4   Wind      Ochu, Bite Bug           1:10  Death Stones
+6    X-ATM092         Boss      4   8   4   3   N/A       SAM08G, Red Bat          2:1   Turtle Shell
+6    Grenaldo         Boss      7   2   8   5   N/A       Death Claw, Blobra       1:1   G-Returner
+6    Gerogero         Boss      1   8   8   3   Poison    Cactaur,Gayla            10:1  Circlet
+6    Iguion           Boss      8   2   8   2   N/A       Tonberry,Gesper          1:1   Cockatrice Pinion
+6    Abadon           Boss      6   8   4   5   N/A       Abyss Worm, Blood Soul   1:30  Dark Ammo
+6    Trauma           Boss      4   8   5   6   N/A       Turtapod, Caterchipillar 1:30  Demolition Ammo
+6    Oilboyle         Boss      1   8   4   8   N/A       GIM47N,Cockatrice        1:30  Fire Ammo
+6    Shumi Tribe      Boss      6   5   8   4   N/A       TRexaur,Grat             5:1   Gambler Spirit
+6    Krysta           Boss      7   5   8   1   N/A       Bomb,Buel789             1:10  Holy Stones
+==========================================================================================================
+7    Propagator       Boss      8   4   4   8   N/A       Blitz, Mesmerize         1:1   G-Mega-Potion
+7    Jumbo Cactaur    Boss      8   8   4   4   N/A       Wendigo, Glacial Eye     1:1   Cactus Thorn
+7    Tri-Point        Boss      8   5   2   8   Thunder   Torama, Belhelmel        40:1  Jet Engine
+7    Gargantua        Boss      5   6   6   8   N/A       Imp,Thrustaevis          10:1  Strength Love
+7    Mobile Type 8    Boss      8   6   7   3   N/A       Blue Dragon,Anacondaur   1:10  Shell Stones
+7    Sphinxara        Boss      8   3   5   8   N/A       Adamantoise,Creeps       1:1   G-Mega-Potion
+7    Tiamat           Boss      8   8   5   4   N/A       Hexadragon, Grendel      1:10  Flare Stones
+7    BGH251F2         Boss      5   7   8   5   N/A       Behemoth,Grand Mantis    1:10  Protect Stones
+7    Red Giant        Boss      6   8   4   7   N/A       Chimera, Forbidden       1:5   Meteor Stones
+7    Catoblepas       Boss      1   8   7   7   N/A       Elnoyle, Armadodo        1:1   Rename Card
+7    Ultima Weapon    Boss      7   7   2   8   N/A       Elastiod, Tri-Face       1:1   Ultima Stone
+==========================================================================================================
+8    Chubby Chocobo   GF        4   4   8   9   N/A       Squall                   1:100 LuvLuvGs
+8    Angelo           GF        9   6   7   3   N/A       Squall                   1:100 Elixers
+8    Gilgamesh        GF        3   7   9   6   N/A       Squall                   1:10  Holy Waters
+8    MinMog           GF        9   3   9   2   N/A       Squall                   1:100 Pet Houses
+8    Chicobo          GF        9   4   8   4   N/A       Squall                   1:100 Gysahl Greens
+8    Quezacotl        GF        2   9   9   4   Thunder   Squall                   1:100 Dynamo Stones
+8    Shiva            GF        6   7   4   9   Ice       Squall                   1:100 North Winds
+8    Ifrit            GF        9   6   2   8   Fire      Squall                   1:3   Elemental Attacks
+8    Siren            GF        9   6   2   8   N/A       Squall                   1:3   Status Attacks
+8    Sacred           GF        5   1   9   9   Earth     Squall                   1:100 Dino Bones
+8    Minotaur         GF        9   9   2   5   Earth     Squall                   1:10  Adamantines
+==========================================================================================================
+9    Carbuncle        GF        8   4   A   4   N/A       Squall                   1:3   Glow Curtains
+9    Diablos          GF        5   A   8   3   N/A       Squall                   1:100 Black Holes
+9    Leviathan        GF        7   A   1   7   Water     Squall                   1:3   Doc's Codes
+9    Odin             GF        8   A   3   5   N/A       Squall                   1:100 Dead Spirits
+9    Pandemonia       GF        A   1   7   7   Wind      Squall                   1:100 Windmills
+9    Cerberus         GF        7   4   6   A   N/A       Squall                   1:100 Lightweights
+9    Alexander        GF        9   A   4   2   Holy      Squall                   1:3   Moon Curtains
+9    Phoenix          GF        7   2   7   A   Fire      Squall                   1:3   Phoenix Spirits
+9    Bahumut          GF        A   8   2   6   N/A       Squall                   1:100 Mega Elixers
+9    Doomtrain        GF        3   1   A   A   Poison    Squall                   1:3   Status Cards
+9    Eden             GF        4   4   9   A   N/A       Squall                   1:3   Monks Codes
+==========================================================================================================
+10   Ward             Player    A   7   2   8   N/A       Squall                   1:3   Gaea's Rings
+10   Kiros            Player    6   7   6   A   N/A       Squall                   1:3   Accelerators
+10   Laguna           Player    5   A   3   9   N/A       Squall                   1:100 Heroes
+10   Selphie          Player    A   8   4   6   N/A       Squall                   1:3   Elemental Guards
+10   Quistis          Player    9   6   A   2   N/A       Squall                   1:3   Samantha Souls
+10   Irvine           Player    2   6   9   A   N/A       Squall                   1:3   Rocket Engines
+10   Zell             Player    8   5   A   6   N/A       Squall                   1:3   Hyper Wrists
+10   Rinoa            Player    4   A   2   A   N/A       Squall                   1:3   Magic Armlets
+10   Edea             Player    A   A   3   3   N/A       Squall                   1:3   Royal Crowns
+10   Seifer           Player    6   9   A   4   N/A       Squall                   1:3   Diamond Armors
+10   Squall           Player    A   A   9   6   N/A       Squall                   1:3   Three Stars
+========================================================================================================== 

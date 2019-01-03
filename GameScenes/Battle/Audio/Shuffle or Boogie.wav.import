@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Shuffle or Boogie.wav-decd9e2040c9496970d095c8d44b47d8.sample"
+
+[deps]
+
+source_file="res://GameScenes/Battle/Audio/Shuffle or Boogie.wav"
+dest_files=[ "res://.import/Shuffle or Boogie.wav-decd9e2040c9496970d095c8d44b47d8.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
