@@ -1,5 +1,7 @@
 # TripleTriad made with Godot 3.0
 
+![TripleTriad in Godot screenshot](https://imgur.com/RwKigsz.jpg)
+
 I love Final Fantasy.  
 I loved FFVIII.  
 I loved Triple Triad.  
