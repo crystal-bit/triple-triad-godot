@@ -12,11 +12,7 @@ you have to code each day of December for at least 1 hour).
 
 ## How to run the game
 
-You can download a prebuilt executable:
-
-- Windows:
-- OSX: 
-- Linux: 
+You can download a prebuilt executable for Windows/OSX/Linux from the [release page](https://github.com/crystal-bit/triple-triad-godot/releases/latest)
 
 Or you can:
 
@@ -27,6 +23,12 @@ Or you can:
    1. Select `Scan`
    2. Select the project folder
    3. Double click on Triple Triad
+
+## Input Controls
+
+- `Arrow keys` to move the cursor
+- `Space/Enter` to confirm
+- `Backspace` to cancel
 
 ## TODO
 
