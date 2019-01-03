@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://GameScenes/Battle/Textures/cardsmat/cardsmat_13.png" type="Texture" id=1]
 [ext_resource path="res://GameScenes/Battle/Textures/cardsmat/cardsmat_1.png" type="Texture" id=2]
@@ -16,9 +16,10 @@
 [ext_resource path="res://GameScenes/Battle/Audio/cursor_move.wav" type="AudioStream" id=14]
 [ext_resource path="res://GameScenes/Battle/Audio/sound-card.wav" type="AudioStream" id=15]
 [ext_resource path="res://GameScenes/Battle/Audio/sound-back.wav" type="AudioStream" id=16]
-[ext_resource path="res://GameScenes/Battle/Scripts/Scores.gd" type="Script" id=17]
-[ext_resource path="res://Globals/Textures/cardstext_13-edit.png" type="Texture" id=18]
-[ext_resource path="res://GameScenes/Battle/Scripts/ScoreTexture.gd" type="Script" id=19]
+[ext_resource path="res://GameScenes/Battle/Audio/sound-invalid.wav" type="AudioStream" id=17]
+[ext_resource path="res://GameScenes/Battle/Scripts/Scores.gd" type="Script" id=18]
+[ext_resource path="res://Globals/Textures/cardstext_13-edit.png" type="Texture" id=19]
+[ext_resource path="res://GameScenes/Battle/Scripts/ScoreTexture.gd" type="Script" id=20]
 
 [sub_resource type="AtlasTexture" id=1]
 
@@ -40,7 +41,7 @@ filter_clip = false
 [sub_resource type="AtlasTexture" id=3]
 
 flags = 4
-atlas = ExtResource( 18 )
+atlas = ExtResource( 19 )
 region = Rect2( 0, 190, 100, 100 )
 margin = Rect2( 0, 0, 0, 0 )
 filter_clip = false
@@ -48,12 +49,12 @@ filter_clip = false
 [sub_resource type="AtlasTexture" id=4]
 
 flags = 4
-atlas = ExtResource( 18 )
+atlas = ExtResource( 19 )
 region = Rect2( 0, 190, 100, 100 )
 margin = Rect2( 0, 0, 0, 0 )
 filter_clip = false
 
-[node name="Battle" type="Control"]
+[node name="Battle" type="Control" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -125,7 +126,6 @@ _sections_unfolded = [ "Margin", "Transform" ]
 
 [node name="Field" type="GridContainer" parent="." index="1"]
 
-editor/display_folded = true
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -642,14 +642,13 @@ script = ExtResource( 12 )
 _sections_unfolded = [ "Pause" ]
 field_selection_pointer_path = NodePath("../../../FieldSelectionPointer")
 player_cards_path = NodePath("../../../../Player1Cards")
+field_path = NodePath("../../../../Field")
 
 [node name="Idle" type="Node" parent="GameLogic/SelectionPointer/State" index="2"]
 
 script = ExtResource( 13 )
 
 [node name="Audio" type="Node" parent="GameLogic/SelectionPointer" index="1"]
-
-editor/display_folded = true
 
 [node name="CursorMove" type="AudioStreamPlayer" parent="GameLogic/SelectionPointer/Audio" index="0"]
 
@@ -672,6 +671,15 @@ bus = "Master"
 [node name="Cancel" type="AudioStreamPlayer" parent="GameLogic/SelectionPointer/Audio" index="2"]
 
 stream = ExtResource( 16 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="Invalid" type="AudioStreamPlayer" parent="GameLogic/SelectionPointer/Audio" index="3"]
+
+stream = ExtResource( 17 )
 volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false
@@ -715,7 +723,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-script = ExtResource( 17 )
+script = ExtResource( 18 )
 
 [node name="Player1Score" type="TextureRect" parent="Scores" index="0"]
 
@@ -736,7 +744,7 @@ size_flags_vertical = 1
 texture = SubResource( 3 )
 expand = true
 stretch_mode = 0
-script = ExtResource( 19 )
+script = ExtResource( 20 )
 _sections_unfolded = [ "Anchor" ]
 
 [node name="Player2Score" type="TextureRect" parent="Scores" index="1"]
@@ -758,11 +766,11 @@ size_flags_vertical = 1
 texture = SubResource( 4 )
 expand = true
 stretch_mode = 0
-script = ExtResource( 19 )
-
-[connection signal="turn_finished" from="Player2Cards" to="GameLogic" method="_on_Player2Cards_turn_finished"]
+script = ExtResource( 20 )
 
 [connection signal="turn_finished" from="Player2Cards" to="GameLogic/SelectionPointer" method="_on_Player2Cards_turn_finished"]
+
+[connection signal="turn_finished" from="Player2Cards" to="GameLogic" method="_on_Player2Cards_turn_finished"]
 
 [connection signal="player_captured_a_card" from="GameLogic" to="Scores" method="_on_GameLogic_player_captured_a_card"]
 
@@ -772,9 +780,9 @@ script = ExtResource( 19 )
 
 [connection signal="change_to_idle_state" from="GameLogic/SelectionPointer/State/CardSelected" to="GameLogic/SelectionPointer" method="_on_CardSelected_change_to_idle_state"]
 
-[connection signal="place_card" from="GameLogic/SelectionPointer/State/CardSelected" to="Player1Cards" method="_on_CardSelected_place_card"]
-
 [connection signal="place_card" from="GameLogic/SelectionPointer/State/CardSelected" to="GameLogic" method="_on_CardSelected_place_card"]
+
+[connection signal="place_card" from="GameLogic/SelectionPointer/State/CardSelected" to="Player1Cards" method="_on_CardSelected_place_card"]
 
 [connection signal="place_card" from="GameLogic/SelectionPointer/State/CardSelected" to="Player2Cards" method="_on_CardSelected_place_card"]
 

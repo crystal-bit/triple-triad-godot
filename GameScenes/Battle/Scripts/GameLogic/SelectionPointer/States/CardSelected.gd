@@ -9,9 +9,12 @@ onready var selection_pointer = get_parent().get_parent()
 # Node dependencies
 export(NodePath) var field_selection_pointer_path
 export(NodePath) var player_cards_path
+export(NodePath) var field_path
 
 onready var field_selection_pointer = get_node(field_selection_pointer_path)
 onready var player_cards = get_node(player_cards_path)
+onready var field = get_node(field_path)
+
 var selected_card_index
 var selected_position
 
@@ -47,7 +50,10 @@ func _process(delta):
 	# update field_selection_pointer position
 	field_selection_pointer.rect_position = (selected_position*256) + Vector2(400, 192)
 	if Input.is_action_just_pressed("ui_accept"):
-		selection_pointer.audio.get_node("CardMove").play()
-		emit_signal("place_card", selected_card_index, selected_position)
-		emit_signal("change_to_idle_state")
+		if field.is_position_empty(selected_position):
+			selection_pointer.audio.get_node("CardMove").play()
+			emit_signal("place_card", selected_card_index, selected_position)
+			emit_signal("change_to_idle_state")
+		else:
+			selection_pointer.audio.get_node("Invalid").play()
 		

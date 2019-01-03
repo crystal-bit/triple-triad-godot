@@ -87,11 +87,6 @@ func get_random_card_container():
 	# TODO: improve this
 	# It is a naive implementation, always gets the first card
 	return get_child(randi() % get_card_count())
-#	var container_index = 0
-#	# get container
-#	var container = get_child(container_index)
-#	# until you find an empty container
-#	while container.get_child(0) != null:
 
 func _on_CardSelected_place_card(a, b):
 	""" Called when the player finishes his turn"""
