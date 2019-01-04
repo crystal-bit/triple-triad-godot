@@ -41,10 +41,6 @@ Or you can:
 
 ## TODO
 
-- Randomize starting cards
-- Add ending screen
-  - Show battle result message (Draw, You Win, You Lose)
-  - Restarte the battle
 - Improve AI
 - Port the project to Godot 3.1
 
