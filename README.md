@@ -5,10 +5,19 @@
 I love Final Fantasy.  
 I loved FFVIII.  
 I loved Triple Triad.  
-I had this question: *"How difficult it is to recreate the Triple Triad card game with Godot Engine?"*
+I had this question: *"How difficult it is to recreate the Triple Triad card game with the Godot Engine?"*
 
-This repository is the answer to my question: the core of the game has been developed during Devember2018 (a challenge where
+This repository is the answer to my question: the core of the game has been developed during [my Devember 2018 challenge](https://davcri.github.io/posts/devember2018-retrospective/) (a challenge where
 you have to code each day of December for at least 1 hour).
+
+## What is implemented
+
+- Basic game mechanics:
+   - Turns
+   - Cards placement
+   - "Capture" mechanic
+- Data driven design for the `Card` node (all the data is taken from a JSON file)
+- Simple AI
 
 ## How to run the game
 
@@ -46,7 +55,7 @@ You can contribute in different ways:
 - download this game and try it
 - talk with your friends about this project
 - tell me your opinions about this project
-- tweet about this project
+- [tweet](https://twitter.com/dav__cri) about this project
 - report bugs
 - make Pull Requests to improve it or add new features
 
@@ -55,8 +64,8 @@ You can contribute in different ways:
 Before working on anything, I want to make sure that no-one is working
 on the same thing at the same time so please feel free to:
 
-- open an issue on Github
-- get in touch on Twitter 
+- [open an issue](https://github.com/crystal-bit/triple-triad-godot/issues/new)
+- get in touch [on Twitter](https://twitter.com/dav__cri) 
 
 **Note**: I really would like to keep improving and expanding this
 project, I love TripleTriad and would love to add other features (eg: online multiplayer matches)
