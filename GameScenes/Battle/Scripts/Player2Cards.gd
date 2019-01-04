@@ -12,7 +12,10 @@ signal turn_finished
 var selected_card_index
 
 func _ready():
+	# update the seed
 	randomize()
+	# randomize AI cards
+	randomize_cards()	
 	set_process(false)
 
 func enable():
@@ -88,6 +91,17 @@ func get_random_card_container():
 	# TODO: improve this
 	# It is a naive implementation, always gets the first card
 	return get_child(randi() % get_card_count())
+
+func randomize_cards():
+	""" Randomize cards in the Player hand """
+	# for each child
+	for child in get_children():
+		# if it is a Container
+		if "Container" in child.name:
+			# get the Card node
+			var card = child.get_child(0)
+			card.card_id = randi() % 110  # max card id is 109
+			card._ready()
 
 func _on_CardSelected_place_card(a, b):
 	""" Called when the player finishes his turn"""

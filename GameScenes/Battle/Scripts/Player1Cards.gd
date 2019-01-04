@@ -9,7 +9,13 @@ extends VBoxContainer
 var selected_card_index
 
 func _ready():
-	set_current_selected_card(0)
+	# set an initial selected card
+	set_current_selected_card(0)	
+	# update the seed
+	randomize()
+	# randomize Player cards
+	randomize_cards()
+
 
 func get_card_container_at(index):
 	""" Get a Card node given an integer index
@@ -56,6 +62,17 @@ func move_left(card_container, offset):
 		Tween.EASE_OUT
 	)
 	$Tween.start()
+
+func randomize_cards():
+	""" Randomize cards in the Player hand """
+	# for each child
+	for child in get_children():
+		# if it is a Container
+		if "Container" in child.name:
+			# get the Card node
+			var card = child.get_child(0)
+			card.card_id = randi() % 110  # max card id is 109
+			card._ready()
 
 func _on_CardSelected_place_card(card_index, field_position):
 	var card_container = get_card_container_at(card_index)

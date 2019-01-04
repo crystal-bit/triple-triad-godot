@@ -1,5 +1,7 @@
 extends GridContainer
 
+signal match_ended
+
 var cards_played = 0
 # const MAX_CARDS_ON_FIELD = 9
 
@@ -14,6 +16,8 @@ func add_card_at_position(card_container, field_position):
 	get_container_by_vector(field_position).add_child(card)
 	# increase played cards counter
 	cards_played += 1
+	if cards_played == 9:
+		emit_signal("match_ended")
 
 func get_random_empty_container():  # TODO: change name! get_vector_...
 	assert cards_played < 9

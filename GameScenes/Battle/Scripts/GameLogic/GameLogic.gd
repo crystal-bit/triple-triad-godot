@@ -85,3 +85,24 @@ func _on_Player2Cards_turn_finished(card_positioned_at):
 	# _apply_elemental_effect()
 	_capture_cards(card_positioned_at, {"player_in_turn": 2})
 	$SelectionPointer._change_state($SelectionPointer/State/SelectingCard, null)
+
+func _on_Field_match_ended():
+	# wait 1 second
+	yield(get_tree().create_timer(1), "timeout")
+	# fade to black
+	get_parent().get_node("Fade/AnimationPlayer").play("fade_to_black")
+	# show result
+	var texture_to_show = ""
+	if get_parent().get_node("Scores/Player1Score").score_number_value > get_parent().get_node("Scores/Player2Score").score_number_value:
+		texture_to_show = "win"
+	elif get_parent().get_node("Scores/Player1Score").score_number_value == get_parent().get_node("Scores/Player2Score").score_number_value:
+		texture_to_show = "draw"
+	else:
+		texture_to_show = "lose"
+	yield(get_tree().create_timer(0.25), "timeout")
+	get_parent().get_node("Results").show_texture(texture_to_show)
+	yield(get_tree().create_timer(1.5), "timeout")
+	get_parent().get_node("Fade/AnimationPlayer").play("fade_to_black")
+	get_tree().reload_current_scene()
+	
+	
