@@ -19,8 +19,8 @@ run/name="TripleTriad"
 
 window/size/width=1536
 window/size/height=896
-window/size/test_width=800
-window/size/test_height=600
+window/size/test_width=1024
+window/size/test_height=720
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
 window/2d/use_pixel_snap=false

@@ -31,7 +31,7 @@ use_filter = true
 font_data = ExtResource( 5 )
 _sections_unfolded = [ "Settings" ]
 
-[node name="TripleTriad" type="Control"]
+[node name="TripleTriad" type="Control" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -57,7 +57,6 @@ bus = "Master"
 
 [node name="MoreInfo" type="Control" parent="." index="2"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -80,7 +79,7 @@ anchor_bottom = 0.0
 margin_left = 1570.0
 margin_top = -3.0
 margin_right = 3138.0
-margin_bottom = 1579.0
+margin_bottom = 2008.0
 rect_scale = Vector2( 0.8, 0.8 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = true
@@ -99,17 +98,18 @@ Feel free to share your opinions, feedback and suggestions:
 - [b]Twitter[/b]: https://twitter.com/dav__cri
 - [b]Blog[/b]: https://davcri.github.io/
 - [b]email[/b]: davcri91@gmail.com
-
-You can find me also here:
-
-- [b]YouTube [ITA-only][/b]: https://twitter.com/dav__cri
 - [b]Instagram[/b]: https://www.instagram.com/crystal_bit/
+
+This game was developed as part of the [i]Crystal Bit[/i]project:
+
+- [b]Github[/b]: https://github.com/crystal-bit
+- [b]YouTube [ITA-only][/b]: https://twitter.com/dav__cri
 
 If you want to support me in other ways, you can buy me a coffee (I'm a coffee lover):
 
 - [b]Paypal[/b]: paypal.me/davcr1
 
-[i]My content will be always released under an open source license.[/i]"
+[i]My content will always be released under an open source license.[/i]"
 visible_characters = -1
 percent_visible = 1.0
 meta_underlined = true
@@ -121,17 +121,18 @@ Feel free to share your opinions, feedback and suggestions:
 - Twitter: https://twitter.com/dav__cri
 - Blog: https://davcri.github.io/
 - email: davcri91@gmail.com
-
-You can find me also here:
-
-- YouTube [ITA-only]: https://twitter.com/dav__cri
 - Instagram: https://www.instagram.com/crystal_bit/
+
+This game was developed as part of the Crystal Bitproject:
+
+- Github: https://github.com/crystal-bit
+- YouTube [ITA-only]: https://twitter.com/dav__cri
 
 If you want to support me in other ways, you can buy me a coffee (I'm a coffee lover):
 
 - Paypal: paypal.me/davcr1
 
-My content will be always released under an open source license."
+My content will always be released under an open source license."
 scroll_active = false
 scroll_following = false
 selection_enabled = false
