@@ -10,83 +10,41 @@
 [sub_resource type="DynamicFont" id=1]
 
 size = 60
-use_mipmaps = false
 use_filter = true
 font_data = ExtResource( 3 )
-_sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="DynamicFont" id=2]
 
 size = 60
-use_mipmaps = false
 use_filter = true
 font_data = ExtResource( 4 )
-_sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 
 [sub_resource type="DynamicFont" id=3]
 
 size = 60
-use_mipmaps = false
 use_filter = true
 font_data = ExtResource( 5 )
-_sections_unfolded = [ "Settings" ]
 
-[node name="TripleTriad" type="Control" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
+[node name="TripleTriad" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 
-[node name="Battle" parent="." index="0" instance=ExtResource( 1 )]
+[node name="Battle" parent="." instance=ExtResource( 1 )]
 
-[node name="BackgroundMusic" type="AudioStreamPlayer" parent="." index="1"]
-
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
-volume_db = 0.0
-pitch_scale = 1.0
 autoplay = true
-mix_target = 0
-bus = "Master"
 
-[node name="MoreInfo" type="Control" parent="." index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="MoreInfo" type="Control" parent="."]
 margin_right = 40.0
 margin_bottom = 40.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 
-[node name="README" type="RichTextLabel" parent="MoreInfo" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="README" type="RichTextLabel" parent="MoreInfo"]
 margin_left = 1570.0
 margin_top = -3.0
 margin_right = 3138.0
 margin_bottom = 2008.0
 rect_scale = Vector2( 0.8, 0.8 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = true
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 custom_fonts/italics_font = SubResource( 1 )
 custom_fonts/bold_font = SubResource( 2 )
 custom_fonts/normal_font = SubResource( 3 )
@@ -110,10 +68,6 @@ If you want to support me in other ways, you can buy me a coffee (I'm a coffee l
 - [b]Paypal[/b]: paypal.me/davcr1
 
 [i]My content will always be released under an open source license.[/i]"
-visible_characters = -1
-percent_visible = 1.0
-meta_underlined = true
-tab_size = 4
 text = "Hi I'm davcri,
 I appreciate when people get in touch, it's a nice way to give support!
 Feel free to share your opinions, feedback and suggestions:
@@ -134,15 +88,9 @@ If you want to support me in other ways, you can buy me a coffee (I'm a coffee l
 
 My content will always be released under an open source license."
 scroll_active = false
-scroll_following = false
-selection_enabled = false
-override_selected_font_color = false
-_sections_unfolded = [ "BBCode", "Rect", "Visibility", "custom_constants", "custom_fonts" ]
 
-[node name="Logo" type="Sprite" parent="MoreInfo" index="1"]
-
+[node name="Logo" type="Sprite" parent="MoreInfo"]
 position = Vector2( 1808.69, -297.693 )
 scale = Vector2( 0.820409, 0.820409 )
 texture = ExtResource( 6 )
-
 

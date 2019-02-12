@@ -27,40 +27,29 @@
 flags = 4
 atlas = ExtResource( 6 )
 region = Rect2( 0, 0, 256, 256 )
-margin = Rect2( 0, 0, 0, 0 )
 filter_clip = true
-_sections_unfolded = [ "Resource" ]
 
 [sub_resource type="AtlasTexture" id=2]
 
 flags = 4
 atlas = ExtResource( 9 )
 region = Rect2( 828, 0, 196, 113 )
-margin = Rect2( 0, 0, 0, 0 )
-filter_clip = false
 
 [sub_resource type="AtlasTexture" id=3]
 
 flags = 4
 atlas = ExtResource( 19 )
 region = Rect2( 0, 190, 100, 100 )
-margin = Rect2( 0, 0, 0, 0 )
-filter_clip = false
 
 [sub_resource type="AtlasTexture" id=4]
 
 flags = 4
 atlas = ExtResource( 19 )
 region = Rect2( 0, 190, 100, 100 )
-margin = Rect2( 0, 0, 0, 0 )
-filter_clip = false
 
 [sub_resource type="Animation" id=5]
 
 resource_name = "fade_from_black"
-length = 1.0
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:color")
 tracks/0/interp = 1
@@ -77,9 +66,6 @@ tracks/0/keys = {
 [sub_resource type="Animation" id=6]
 
 resource_name = "fade_to_black"
-length = 1.0
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:color")
 tracks/0/interp = 1
@@ -103,31 +89,22 @@ load_path = "res://.import/cardstext_14.png-bf399ca8e73133f91cbb4d7246dd44f0.ste
 flags = 4
 atlas = SubResource( 7 )
 region = Rect2( 0, 0, 1000, 200 )
-margin = Rect2( 0, 0, 0, 0 )
-filter_clip = false
 
 [sub_resource type="AtlasTexture" id=9]
 
 flags = 4
 atlas = SubResource( 7 )
 region = Rect2( 0, 200, 1000, 200 )
-margin = Rect2( 0, 0, 0, 0 )
-filter_clip = false
 
 [sub_resource type="AtlasTexture" id=10]
 
 flags = 4
 atlas = SubResource( 7 )
 region = Rect2( 0, 400, 1000, 200 )
-margin = Rect2( 0, 0, 0, 0 )
-filter_clip = false
 
 [sub_resource type="Animation" id=11]
 
 resource_name = "fade_in"
-length = 1.0
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("CenterContainer:modulate")
 tracks/0/interp = 1
@@ -144,9 +121,6 @@ tracks/0/keys = {
 [sub_resource type="Animation" id=12]
 
 resource_name = "fade_out"
-length = 1.0
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("CenterContainer:modulate")
 tracks/0/interp = 1
@@ -160,78 +134,27 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[node name="Battle" type="Control" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-_sections_unfolded = [ "Mouse", "Transform", "Visibility", "Z Index" ]
+[node name="Battle" type="Control"]
 __meta__ = {
 "_edit_horizontal_guides_": [ 64.0, 832.0 ],
 "_edit_vertical_guides_": [ 384.0, 1152.0 ]
 }
 
-[node name="BackroundTextures" type="Control" parent="." index="0"]
-
+[node name="BackroundTextures" type="Control" parent="."]
 editor/display_folded = true
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-_sections_unfolded = [ "Anchor", "Grow Direction", "Hint", "Margin", "Rect" ]
 
-[node name="CardsmatLeft" type="TextureRect" parent="BackroundTextures" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CardsmatLeft" type="TextureRect" parent="BackroundTextures"]
 margin_right = 1024.0
 margin_bottom = 1024.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 texture = ExtResource( 1 )
-stretch_mode = 0
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="CardsmatRight" type="TextureRect" parent="BackroundTextures" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CardsmatRight" type="TextureRect" parent="BackroundTextures"]
 margin_left = 1024.0
 margin_right = 1536.0
 margin_bottom = 1024.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 texture = ExtResource( 2 )
-stretch_mode = 0
-_sections_unfolded = [ "Margin", "Transform" ]
 
-[node name="Field" type="GridContainer" parent="." index="1"]
-
+[node name="Field" type="GridContainer" parent="."]
 editor/display_folded = true
 anchor_left = 0.5
 anchor_top = 0.5
@@ -241,777 +164,353 @@ margin_left = 384.0
 margin_top = 64.0
 margin_right = 1152.0
 margin_bottom = 822.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_constants/vseparation = 16
 custom_constants/hseparation = 16
 columns = 3
 script = ExtResource( 3 )
-_sections_unfolded = [ "Focus", "Grow Direction", "Hint", "Mouse", "Rect", "Size Flags", "Theme", "custom_constants" ]
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Container1" type="Container" parent="Field" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Container1" type="Container" parent="Field"]
 margin_right = 245.0
 margin_bottom = 242.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-_sections_unfolded = [ "Rect", "Size Flags", "Theme" ]
 
-[node name="Container2" type="Container" parent="Field" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Container2" type="Container" parent="Field"]
 margin_left = 261.0
 margin_right = 506.0
 margin_bottom = 242.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-_sections_unfolded = [ "Rect", "Theme" ]
 
-[node name="Container3" type="Container" parent="Field" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Container3" type="Container" parent="Field"]
 margin_left = 522.0
 margin_right = 767.0
 margin_bottom = 242.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-_sections_unfolded = [ "Theme" ]
 
-[node name="Container4" type="Container" parent="Field" index="3"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Container4" type="Container" parent="Field"]
 margin_top = 258.0
 margin_right = 245.0
 margin_bottom = 500.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-_sections_unfolded = [ "Theme" ]
 
-[node name="Container5" type="Container" parent="Field" index="4"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Container5" type="Container" parent="Field"]
 margin_left = 261.0
 margin_top = 258.0
 margin_right = 506.0
 margin_bottom = 500.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-_sections_unfolded = [ "Theme" ]
 
-[node name="Container6" type="Container" parent="Field" index="5"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Container6" type="Container" parent="Field"]
 margin_left = 522.0
 margin_top = 258.0
 margin_right = 767.0
 margin_bottom = 500.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-_sections_unfolded = [ "Theme" ]
 
-[node name="Container7" type="Container" parent="Field" index="6"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Container7" type="Container" parent="Field"]
 margin_top = 516.0
 margin_right = 245.0
 margin_bottom = 758.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-_sections_unfolded = [ "Rect", "Theme" ]
 
-[node name="Container8" type="Container" parent="Field" index="7"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Container8" type="Container" parent="Field"]
 margin_left = 261.0
 margin_top = 516.0
 margin_right = 506.0
 margin_bottom = 758.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-_sections_unfolded = [ "Theme" ]
 
-[node name="Container9" type="Container" parent="Field" index="8"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Container9" type="Container" parent="Field"]
 margin_left = 522.0
 margin_top = 516.0
 margin_right = 767.0
 margin_bottom = 758.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-_sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Rect", "Theme" ]
 
-[node name="Player1Cards" type="VBoxContainer" parent="." index="2"]
-
+[node name="Player1Cards" type="VBoxContainer" parent="."]
 editor/display_folded = true
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
 anchor_bottom = 1.0
 margin_left = 50.0
 margin_top = 64.0
 margin_right = 288.0
 margin_bottom = 960.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 custom_constants/separation = -250
-alignment = 0
 script = ExtResource( 4 )
-_sections_unfolded = [ "Margin", "Rect", "custom_constants" ]
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Container0" type="Container" parent="Player1Cards" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Container0" type="Container" parent="Player1Cards"]
 margin_right = 238.0
 margin_bottom = 379.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-_sections_unfolded = [ "Rect" ]
 
-[node name="Card" parent="Player1Cards/Container0" index="0" instance=ExtResource( 5 )]
-
+[node name="Card" parent="Player1Cards/Container0" instance=ExtResource( 5 )]
 card_id = 66
 
-[node name="Container1" type="Container" parent="Player1Cards" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Container1" type="Container" parent="Player1Cards"]
 margin_top = 129.0
 margin_right = 238.0
 margin_bottom = 508.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-_sections_unfolded = [ "Rect", "Size Flags" ]
 
-[node name="Card" parent="Player1Cards/Container1" index="0" instance=ExtResource( 5 )]
-
+[node name="Card" parent="Player1Cards/Container1" instance=ExtResource( 5 )]
 texture_normal = SubResource( 1 )
 
-[node name="Container2" type="Container" parent="Player1Cards" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Container2" type="Container" parent="Player1Cards"]
 margin_top = 258.0
 margin_right = 238.0
 margin_bottom = 637.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Card" parent="Player1Cards/Container2" index="0" instance=ExtResource( 5 )]
-
+[node name="Card" parent="Player1Cards/Container2" instance=ExtResource( 5 )]
 card_id = 43
 
-[node name="Container3" type="Container" parent="Player1Cards" index="3"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Container3" type="Container" parent="Player1Cards"]
 margin_top = 387.0
 margin_right = 238.0
 margin_bottom = 766.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Card" parent="Player1Cards/Container3" index="0" instance=ExtResource( 5 )]
-
+[node name="Card" parent="Player1Cards/Container3" instance=ExtResource( 5 )]
 card_id = 7
 
-[node name="Container4" type="Container" parent="Player1Cards" index="4"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Container4" type="Container" parent="Player1Cards"]
 margin_top = 516.0
 margin_right = 238.0
 margin_bottom = 896.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Card" parent="Player1Cards/Container4" index="0" instance=ExtResource( 5 )]
-
+[node name="Card" parent="Player1Cards/Container4" instance=ExtResource( 5 )]
 card_id = 102
 
-[node name="Tween" type="Tween" parent="Player1Cards" index="5"]
+[node name="Tween" type="Tween" parent="Player1Cards"]
 
-repeat = false
-playback_process_mode = 1
-playback_speed = 1.0
-playback/active = false
-playback/repeat = false
-playback/speed = 1.0
-
-[node name="Player2Cards" type="VBoxContainer" parent="." index="3"]
-
+[node name="Player2Cards" type="VBoxContainer" parent="."]
 editor/display_folded = true
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_left = 1246.0
 margin_top = 64.0
 margin_right = 1484.0
 margin_bottom = 960.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 custom_constants/separation = -250
-alignment = 0
 script = ExtResource( 7 )
-_sections_unfolded = [ "Anchor", "Margin", "custom_constants" ]
 __meta__ = {
 "_edit_group_": true
 }
 field_path = NodePath("../Field")
 
-[node name="Container0" type="Container" parent="Player2Cards" index="0"]
-
+[node name="Container0" type="Container" parent="Player2Cards"]
 editor/display_folded = true
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_right = 238.0
 margin_bottom = 379.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Card" parent="Player2Cards/Container0" index="0" instance=ExtResource( 5 )]
-
+[node name="Card" parent="Player2Cards/Container0" instance=ExtResource( 5 )]
 covered = true
 owned_by_player = false
 
-[node name="Container1" type="Container" parent="Player2Cards" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Container1" type="Container" parent="Player2Cards"]
 margin_top = 129.0
 margin_right = 238.0
 margin_bottom = 508.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="Card" parent="Player2Cards/Container1" index="0" instance=ExtResource( 5 )]
-
+[node name="Card" parent="Player2Cards/Container1" instance=ExtResource( 5 )]
 card_id = 6
 covered = true
 owned_by_player = false
 
-[node name="Container2" type="Container" parent="Player2Cards" index="2"]
-
+[node name="Container2" type="Container" parent="Player2Cards"]
 editor/display_folded = true
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_top = 258.0
 margin_right = 238.0
 margin_bottom = 637.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Card" parent="Player2Cards/Container2" index="0" instance=ExtResource( 5 )]
-
+[node name="Card" parent="Player2Cards/Container2" instance=ExtResource( 5 )]
 card_id = 7
 covered = true
 owned_by_player = false
 
-[node name="Container3" type="Container" parent="Player2Cards" index="3"]
-
+[node name="Container3" type="Container" parent="Player2Cards"]
 editor/display_folded = true
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_top = 387.0
 margin_right = 238.0
 margin_bottom = 766.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Card" parent="Player2Cards/Container3" index="0" instance=ExtResource( 5 )]
-
+[node name="Card" parent="Player2Cards/Container3" instance=ExtResource( 5 )]
 card_id = 8
 covered = true
 owned_by_player = false
 
-[node name="Container4" type="Container" parent="Player2Cards" index="4"]
-
+[node name="Container4" type="Container" parent="Player2Cards"]
 editor/display_folded = true
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_top = 516.0
 margin_right = 238.0
 margin_bottom = 896.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Card" parent="Player2Cards/Container4" index="0" instance=ExtResource( 5 )]
-
+[node name="Card" parent="Player2Cards/Container4" instance=ExtResource( 5 )]
 card_id = 101
 covered = true
 owned_by_player = false
 
-[node name="Tween" type="Tween" parent="Player2Cards" index="5"]
+[node name="Tween" type="Tween" parent="Player2Cards"]
 
-repeat = false
-playback_process_mode = 1
-playback_speed = 1.0
-playback/active = false
-playback/repeat = false
-playback/speed = 1.0
-
-[node name="GameLogic" type="Control" parent="." index="4"]
-
+[node name="GameLogic" type="Control" parent="."]
 editor/display_folded = true
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_right = 40.0
 margin_bottom = 40.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 script = ExtResource( 8 )
 field_path = NodePath("../Field")
 
-[node name="SelectionPointer" type="TextureRect" parent="GameLogic" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="SelectionPointer" type="TextureRect" parent="GameLogic"]
 margin_left = 443.0
 margin_top = 148.0
 margin_right = 639.0
 margin_bottom = 261.0
 rect_scale = Vector2( -0.5, 0.5 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 texture = SubResource( 2 )
-stretch_mode = 0
 script = ExtResource( 10 )
-_sections_unfolded = [ "Material", "Rect", "Textures", "Visibility" ]
 
-[node name="State" type="Node" parent="GameLogic/SelectionPointer" index="0"]
+[node name="State" type="Node" parent="GameLogic/SelectionPointer"]
 
-[node name="SelectingCard" type="Node" parent="GameLogic/SelectionPointer/State" index="0"]
-
+[node name="SelectingCard" type="Node" parent="GameLogic/SelectionPointer/State"]
 script = ExtResource( 11 )
-_sections_unfolded = [ "Pause" ]
-selected_card_index = 0
 cards_container_node_path = NodePath("../../../../Player1Cards")
 
-[node name="CardSelected" type="Node" parent="GameLogic/SelectionPointer/State" index="1"]
-
+[node name="CardSelected" type="Node" parent="GameLogic/SelectionPointer/State"]
 script = ExtResource( 12 )
-_sections_unfolded = [ "Pause" ]
 field_selection_pointer_path = NodePath("../../../FieldSelectionPointer")
 player_cards_path = NodePath("../../../../Player1Cards")
 field_path = NodePath("../../../../Field")
 
-[node name="Idle" type="Node" parent="GameLogic/SelectionPointer/State" index="2"]
-
+[node name="Idle" type="Node" parent="GameLogic/SelectionPointer/State"]
 script = ExtResource( 13 )
 
-[node name="Audio" type="Node" parent="GameLogic/SelectionPointer" index="1"]
-
+[node name="Audio" type="Node" parent="GameLogic/SelectionPointer"]
 editor/display_folded = true
 
-[node name="CursorMove" type="AudioStreamPlayer" parent="GameLogic/SelectionPointer/Audio" index="0"]
-
+[node name="CursorMove" type="AudioStreamPlayer" parent="GameLogic/SelectionPointer/Audio"]
 stream = ExtResource( 14 )
-volume_db = 0.0
-pitch_scale = 1.0
-autoplay = false
-mix_target = 0
-bus = "Master"
 
-[node name="CardMove" type="AudioStreamPlayer" parent="GameLogic/SelectionPointer/Audio" index="1"]
-
+[node name="CardMove" type="AudioStreamPlayer" parent="GameLogic/SelectionPointer/Audio"]
 stream = ExtResource( 15 )
-volume_db = 0.0
-pitch_scale = 1.0
-autoplay = false
-mix_target = 0
-bus = "Master"
 
-[node name="Cancel" type="AudioStreamPlayer" parent="GameLogic/SelectionPointer/Audio" index="2"]
-
+[node name="Cancel" type="AudioStreamPlayer" parent="GameLogic/SelectionPointer/Audio"]
 stream = ExtResource( 16 )
-volume_db = 0.0
-pitch_scale = 1.0
-autoplay = false
-mix_target = 0
-bus = "Master"
 
-[node name="Invalid" type="AudioStreamPlayer" parent="GameLogic/SelectionPointer/Audio" index="3"]
-
+[node name="Invalid" type="AudioStreamPlayer" parent="GameLogic/SelectionPointer/Audio"]
 stream = ExtResource( 17 )
-volume_db = 0.0
-pitch_scale = 1.0
-autoplay = false
-mix_target = 0
-bus = "Master"
 
-[node name="FieldSelectionPointer" type="TextureRect" parent="GameLogic" index="1"]
-
+[node name="FieldSelectionPointer" type="TextureRect" parent="GameLogic"]
 visible = false
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_left = 656.0
 margin_top = 448.0
 margin_right = 852.0
 margin_bottom = 561.0
 rect_scale = Vector2( 0.5, 0.5 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 texture = SubResource( 2 )
-stretch_mode = 0
-_sections_unfolded = [ "Rect" ]
 
-[node name="Scores" type="Control" parent="." index="5"]
-
+[node name="Scores" type="Control" parent="."]
 editor/display_folded = true
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_right = 40.0
 margin_bottom = 40.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 script = ExtResource( 18 )
 
-[node name="Player1Score" type="TextureRect" parent="Scores" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Player1Score" type="TextureRect" parent="Scores"]
 margin_left = 112.0
 margin_top = 768.0
 margin_right = 224.0
 margin_bottom = 880.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 texture = SubResource( 3 )
 expand = true
-stretch_mode = 0
 script = ExtResource( 20 )
-_sections_unfolded = [ "Anchor" ]
 
-[node name="Player2Score" type="TextureRect" parent="Scores" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Player2Score" type="TextureRect" parent="Scores"]
 margin_left = 1312.0
 margin_top = 768.0
 margin_right = 1432.0
 margin_bottom = 880.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 texture = SubResource( 4 )
 expand = true
-stretch_mode = 0
 script = ExtResource( 20 )
 
-[node name="Fade" type="CanvasModulate" parent="." index="6"]
-
+[node name="Fade" type="CanvasModulate" parent="."]
 editor/display_folded = true
-color = Color( 1, 1, 1, 1 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Fade" index="0"]
-
-root_node = NodePath("..")
-autoplay = ""
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Fade"]
 anims/fade_from_black = SubResource( 5 )
 anims/fade_to_black = SubResource( 6 )
-blend_times = [  ]
-_sections_unfolded = [ "Playback Options" ]
 
-[node name="Results" type="CanvasLayer" parent="." index="7"]
-
+[node name="Results" type="CanvasLayer" parent="."]
 editor/display_folded = true
-layer = 1
-offset = Vector2( 0, 0 )
-rotation = 0.0
-scale = Vector2( 1, 1 )
-transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 script = ExtResource( 21 )
 
-[node name="CenterContainer" type="CenterContainer" parent="Results" index="0"]
-
+[node name="CenterContainer" type="CenterContainer" parent="Results"]
 modulate = Color( 1, 1, 1, 0 )
-anchor_left = 0.0
-anchor_top = 0.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-use_top_left = false
-_sections_unfolded = [ "Visibility" ]
 
-[node name="WinTexture" type="TextureRect" parent="Results/CenterContainer" index="0"]
-
+[node name="WinTexture" type="TextureRect" parent="Results/CenterContainer"]
 visible = false
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_left = 268.0
 margin_top = 348.0
 margin_right = 1268.0
 margin_bottom = 548.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 texture = SubResource( 8 )
-stretch_mode = 0
 
-[node name="LoseTexture" type="TextureRect" parent="Results/CenterContainer" index="1"]
-
+[node name="LoseTexture" type="TextureRect" parent="Results/CenterContainer"]
 visible = false
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_left = 268.0
 margin_top = 348.0
 margin_right = 1268.0
 margin_bottom = 548.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 texture = SubResource( 9 )
-stretch_mode = 0
 
-[node name="DrawTexture" type="TextureRect" parent="Results/CenterContainer" index="2"]
-
+[node name="DrawTexture" type="TextureRect" parent="Results/CenterContainer"]
 visible = false
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_left = 268.0
 margin_top = 348.0
 margin_right = 1268.0
 margin_bottom = 548.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 texture = SubResource( 10 )
-stretch_mode = 0
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Results" index="1"]
-
-root_node = NodePath("..")
-autoplay = ""
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Results"]
 anims/fade_in = SubResource( 11 )
 anims/fade_out = SubResource( 12 )
-blend_times = [  ]
 
 [connection signal="match_ended" from="Field" to="GameLogic" method="_on_Field_match_ended"]
-
 [connection signal="turn_finished" from="Player2Cards" to="GameLogic" method="_on_Player2Cards_turn_finished"]
-
 [connection signal="turn_finished" from="Player2Cards" to="GameLogic/SelectionPointer" method="_on_Player2Cards_turn_finished"]
-
 [connection signal="player_captured_a_card" from="GameLogic" to="Scores" method="_on_GameLogic_player_captured_a_card"]
-
 [connection signal="card_selected" from="GameLogic/SelectionPointer/State/SelectingCard" to="GameLogic/SelectionPointer" method="_on_SelectingCard_card_selected"]
-
 [connection signal="new_card_pointed" from="GameLogic/SelectionPointer/State/SelectingCard" to="Player1Cards" method="_on_SelectingCard_new_card_pointed"]
-
 [connection signal="change_to_idle_state" from="GameLogic/SelectionPointer/State/CardSelected" to="GameLogic/SelectionPointer" method="_on_CardSelected_change_to_idle_state"]
-
-[connection signal="place_card" from="GameLogic/SelectionPointer/State/CardSelected" to="Player1Cards" method="_on_CardSelected_place_card"]
-
 [connection signal="place_card" from="GameLogic/SelectionPointer/State/CardSelected" to="Player2Cards" method="_on_CardSelected_place_card"]
-
 [connection signal="place_card" from="GameLogic/SelectionPointer/State/CardSelected" to="GameLogic" method="_on_CardSelected_place_card"]
-
+[connection signal="place_card" from="GameLogic/SelectionPointer/State/CardSelected" to="Player1Cards" method="_on_CardSelected_place_card"]
 [connection signal="return_to_card_selection" from="GameLogic/SelectionPointer/State/CardSelected" to="GameLogic/SelectionPointer" method="_on_CardSelected_return_to_card_selection"]
-
-
