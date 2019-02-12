@@ -1,6 +1,6 @@
 extends Sprite
 
-export(NodePath) var menu_path # used to get the list of menu entries (they should be Control nodes for this script to work)
+export(NodePath) var menu_path  # used to get the list of menu entries (they should be Control nodes for this script to work)
 onready var menu_entries = get_node(menu_path).get_children()
 var positions = []
 var current_position_index setget set_current_position
@@ -26,15 +26,16 @@ func _process(delta):
 		move_down()
 	elif Input.is_action_just_pressed("ui_up"):
 		move_up()
+		
 	if Input.is_action_just_pressed("ui_accept"):
 		var selected_menu: Label = menu_entries[current_position_index]
 		# if the menu is enabled
 		if selected_menu.modulate.a == 1:
 			print("Option selected: " + selected_menu.name)
 			# play confirm sound and load new scene
+			$Sounds/Confirm.play()
 		else:
-			pass
-			# play error sound
+			$Sounds/Denied.play()
 		
 
 func set_current_position(new_pos):
@@ -50,10 +51,14 @@ func set_current_position(new_pos):
 
 
 func move_down():
-	current_position_index = int(clamp(current_position_index + 1, 0, len(positions) - 1))
-	set_current_position(current_position_index)
+	if current_position_index < len(positions) - 1:
+		current_position_index = current_position_index + 1
+		set_current_position(current_position_index)
+		$Sounds/Confirm.play()
 
 
 func move_up():
-	current_position_index = int(clamp(current_position_index - 1, 0, len(positions) - 1))
-	set_current_position(current_position_index)
+	if 0 < current_position_index:
+		current_position_index = current_position_index - 1
+		set_current_position(current_position_index)
+		$Sounds/Confirm.play()

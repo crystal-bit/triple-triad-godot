@@ -13,14 +13,17 @@
 [ext_resource path="res://GameScenes/Battle/Scripts/GameLogic/SelectionPointer/States/SelectingCard.gd" type="Script" id=11]
 [ext_resource path="res://GameScenes/Battle/Scripts/GameLogic/SelectionPointer/States/CardSelected.gd" type="Script" id=12]
 [ext_resource path="res://GameScenes/Battle/Scripts/GameLogic/SelectionPointer/States/Idle.gd" type="Script" id=13]
-[ext_resource path="res://GameScenes/Battle/Audio/cursor_move.wav" type="AudioStream" id=14]
+[ext_resource path="res://Globals/Audio/cursor_move.wav" type="AudioStream" id=14]
 [ext_resource path="res://GameScenes/Battle/Audio/sound-card.wav" type="AudioStream" id=15]
-[ext_resource path="res://GameScenes/Battle/Audio/sound-back.wav" type="AudioStream" id=16]
-[ext_resource path="res://GameScenes/Battle/Audio/sound-invalid.wav" type="AudioStream" id=17]
+[ext_resource path="res://Globals/Audio/sound-back.wav" type="AudioStream" id=16]
+[ext_resource path="res://Globals/Audio/sound-invalid.wav" type="AudioStream" id=17]
 [ext_resource path="res://GameScenes/Battle/Scripts/Scores.gd" type="Script" id=18]
 [ext_resource path="res://Globals/Textures/cardstext_13-edit.png" type="Texture" id=19]
 [ext_resource path="res://GameScenes/Battle/Scripts/ScoreTexture.gd" type="Script" id=20]
 [ext_resource path="res://GameScenes/Battle/Scripts/Results.gd" type="Script" id=21]
+
+
+
 
 [sub_resource type="AtlasTexture" id=1]
 
