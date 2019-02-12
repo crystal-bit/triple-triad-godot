@@ -381,7 +381,6 @@ owned_by_player = false
 [node name="Tween" type="Tween" parent="Player2Cards"]
 
 [node name="GameLogic" type="Control" parent="."]
-editor/display_folded = true
 margin_right = 40.0
 margin_bottom = 40.0
 script = ExtResource( 8 )
@@ -467,7 +466,6 @@ anims/fade_from_black = SubResource( 5 )
 anims/fade_to_black = SubResource( 6 )
 
 [node name="Results" type="CanvasLayer" parent="."]
-editor/display_folded = true
 script = ExtResource( 21 )
 
 [node name="CenterContainer" type="CenterContainer" parent="Results"]
