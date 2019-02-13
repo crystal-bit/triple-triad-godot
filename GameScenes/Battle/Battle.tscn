@@ -8,7 +8,7 @@
 [ext_resource path="res://GameObjects/Card/Textures/cards_0.png" type="Texture" id=6]
 [ext_resource path="res://GameScenes/Battle/Scripts/Player2Cards.gd" type="Script" id=7]
 [ext_resource path="res://GameScenes/Battle/Scripts/GameLogic/GameLogic.gd" type="Script" id=8]
-[ext_resource path="res://GameScenes/Battle/Textures/iconfl01_15.png" type="Texture" id=9]
+[ext_resource path="res://Globals/Textures/iconfl01_15.png" type="Texture" id=9]
 [ext_resource path="res://GameScenes/Battle/Scripts/GameLogic/SelectionPointer/SelectionPointer.gd" type="Script" id=10]
 [ext_resource path="res://GameScenes/Battle/Scripts/GameLogic/SelectionPointer/States/SelectingCard.gd" type="Script" id=11]
 [ext_resource path="res://GameScenes/Battle/Scripts/GameLogic/SelectionPointer/States/CardSelected.gd" type="Script" id=12]
@@ -21,8 +21,6 @@
 [ext_resource path="res://Globals/Textures/cardstext_13-edit.png" type="Texture" id=19]
 [ext_resource path="res://GameScenes/Battle/Scripts/ScoreTexture.gd" type="Script" id=20]
 [ext_resource path="res://GameScenes/Battle/Scripts/Results.gd" type="Script" id=21]
-
-
 
 
 [sub_resource type="AtlasTexture" id=1]
@@ -158,7 +156,6 @@ margin_bottom = 1024.0
 texture = ExtResource( 2 )
 
 [node name="Field" type="GridContainer" parent="."]
-editor/display_folded = true
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -384,6 +381,7 @@ owned_by_player = false
 [node name="Tween" type="Tween" parent="Player2Cards"]
 
 [node name="GameLogic" type="Control" parent="."]
+editor/display_folded = true
 margin_right = 40.0
 margin_bottom = 40.0
 script = ExtResource( 8 )
@@ -475,6 +473,8 @@ script = ExtResource( 21 )
 modulate = Color( 1, 1, 1, 0 )
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = 46.0135
+margin_right = 46.0135
 
 [node name="WinTexture" type="TextureRect" parent="Results/CenterContainer"]
 visible = false
@@ -512,6 +512,6 @@ anims/fade_out = SubResource( 12 )
 [connection signal="new_card_pointed" from="GameLogic/SelectionPointer/State/SelectingCard" to="Player1Cards" method="_on_SelectingCard_new_card_pointed"]
 [connection signal="change_to_idle_state" from="GameLogic/SelectionPointer/State/CardSelected" to="GameLogic/SelectionPointer" method="_on_CardSelected_change_to_idle_state"]
 [connection signal="place_card" from="GameLogic/SelectionPointer/State/CardSelected" to="Player2Cards" method="_on_CardSelected_place_card"]
-[connection signal="place_card" from="GameLogic/SelectionPointer/State/CardSelected" to="GameLogic" method="_on_CardSelected_place_card"]
 [connection signal="place_card" from="GameLogic/SelectionPointer/State/CardSelected" to="Player1Cards" method="_on_CardSelected_place_card"]
+[connection signal="place_card" from="GameLogic/SelectionPointer/State/CardSelected" to="GameLogic" method="_on_CardSelected_place_card"]
 [connection signal="return_to_card_selection" from="GameLogic/SelectionPointer/State/CardSelected" to="GameLogic/SelectionPointer" method="_on_CardSelected_return_to_card_selection"]

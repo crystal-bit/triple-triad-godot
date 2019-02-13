@@ -3,13 +3,13 @@ extends Sprite
 export(NodePath) var menu_path  # used to get the list of menu entries (they should be Control nodes for this script to work)
 onready var menu_entries = get_node(menu_path).get_children()
 var positions = []
-var current_position_index setget set_current_position
+var current_position_index
 
 
 func _ready():
 	for entry in menu_entries:
 		if entry.visible and entry is Label:
-			positions.append((entry as Label).rect_position)
+			positions.append(entry.rect_position)
 			print(entry.rect_position)
 	if len(positions) > 0:
 		set_current_position(0)
@@ -48,17 +48,16 @@ func set_current_position(new_pos):
 			positions[current_position_index].x,
 			positions[current_position_index].y
 		)
+		return true  # Cursor was moved
+	else:
+		return false  # Cursor was not moved
 
 
-func move_down():
-	if current_position_index < len(positions) - 1:
-		current_position_index = current_position_index + 1
-		set_current_position(current_position_index)
+func move_down():	
+	if set_current_position(current_position_index + 1):
 		$Sounds/Confirm.play()
 
 
 func move_up():
-	if 0 < current_position_index:
-		current_position_index = current_position_index - 1
-		set_current_position(current_position_index)
+	if set_current_position(current_position_index - 1):
 		$Sounds/Confirm.play()
