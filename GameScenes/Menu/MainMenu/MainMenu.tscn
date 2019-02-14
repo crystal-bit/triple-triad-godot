@@ -1,16 +1,18 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://GameScenes/Menu/MainMenu/Scripts/MenuEntries.gd" type="Script" id=1]
 [ext_resource path="res://Globals/Fonts/Cinzel-Regular.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://Globals/Textures/iconfl01_15.png" type="Texture" id=3]
-[ext_resource path="res://GameScenes/Menu/MainMenu/Scripts/MenuSelectionPointer.gd" type="Script" id=4]
-[ext_resource path="res://Globals/Audio/cursor_move.wav" type="AudioStream" id=5]
-[ext_resource path="res://Globals/Audio/sound-invalid.wav" type="AudioStream" id=6]
-[ext_resource path="res://Globals/Audio/sound-back.wav" type="AudioStream" id=7]
-[ext_resource path="res://Globals/Fonts/ChakraPetch-Italic.ttf" type="DynamicFontData" id=8]
-[ext_resource path="res://Globals/Fonts/ChakraPetch-Bold.ttf" type="DynamicFontData" id=9]
-[ext_resource path="res://Globals/Fonts/ChakraPetch-Regular.ttf" type="DynamicFontData" id=10]
-[ext_resource path="res://Globals/Textures/logo-crystalbit.png" type="Texture" id=11]
+[ext_resource path="res://GameScenes/Menu/MainMenu/Scripts/SinglePlayerLabel.gd" type="Script" id=3]
+[ext_resource path="res://GameScenes/Battle/Battle.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Globals/Textures/iconfl01_15.png" type="Texture" id=5]
+[ext_resource path="res://GameScenes/Menu/MainMenu/Scripts/MenuSelectionPointer.gd" type="Script" id=6]
+[ext_resource path="res://Globals/Audio/cursor_move.wav" type="AudioStream" id=7]
+[ext_resource path="res://Globals/Audio/sound-invalid.wav" type="AudioStream" id=8]
+[ext_resource path="res://Globals/Audio/sound-back.wav" type="AudioStream" id=9]
+[ext_resource path="res://Globals/Fonts/ChakraPetch-Italic.ttf" type="DynamicFontData" id=10]
+[ext_resource path="res://Globals/Fonts/ChakraPetch-Bold.ttf" type="DynamicFontData" id=11]
+[ext_resource path="res://Globals/Fonts/ChakraPetch-Regular.ttf" type="DynamicFontData" id=12]
+[ext_resource path="res://Globals/Textures/logo-crystalbit.png" type="Texture" id=13]
 
 [sub_resource type="DynamicFontData" id=1]
 
@@ -29,26 +31,26 @@ font_data = ExtResource( 2 )
 [sub_resource type="AtlasTexture" id=4]
 
 flags = 4
-atlas = ExtResource( 3 )
+atlas = ExtResource( 5 )
 region = Rect2( 828, 0, 196, 113 )
 
 [sub_resource type="DynamicFont" id=5]
 
 size = 60
 use_filter = true
-font_data = ExtResource( 8 )
+font_data = ExtResource( 10 )
 
 [sub_resource type="DynamicFont" id=6]
 
 size = 60
 use_filter = true
-font_data = ExtResource( 9 )
+font_data = ExtResource( 11 )
 
 [sub_resource type="DynamicFont" id=7]
 
 size = 60
 use_filter = true
-font_data = ExtResource( 10 )
+font_data = ExtResource( 12 )
 
 [node name="MainMenu" type="Control"]
 anchor_right = 1.0
@@ -112,6 +114,8 @@ margin_bottom = 220.0
 size_flags_horizontal = 5
 custom_fonts/font = SubResource( 3 )
 text = "Single Player"
+script = ExtResource( 3 )
+next_scene = ExtResource( 4 )
 
 [node name="MultiPlayerLabel" type="Label" parent="UI/MarginContainer/VBoxContainer/MenuEntries"]
 modulate = Color( 1, 1, 1, 0.3 )
@@ -152,28 +156,32 @@ position = Vector2( -81, 177 )
 scale = Vector2( 0.4, 0.4 )
 z_index = 2
 texture = SubResource( 4 )
-script = ExtResource( 4 )
+script = ExtResource( 6 )
 
 [node name="Sounds" type="Node" parent="UI/MarginContainer/VBoxContainer/MenuEntries/MenuSelectionPointer"]
 
 [node name="Confirm" type="AudioStreamPlayer" parent="UI/MarginContainer/VBoxContainer/MenuEntries/MenuSelectionPointer/Sounds"]
-stream = ExtResource( 5 )
-
-[node name="Denied" type="AudioStreamPlayer" parent="UI/MarginContainer/VBoxContainer/MenuEntries/MenuSelectionPointer/Sounds"]
-stream = ExtResource( 6 )
-
-[node name="Back" type="AudioStreamPlayer" parent="UI/MarginContainer/VBoxContainer/MenuEntries/MenuSelectionPointer/Sounds"]
 stream = ExtResource( 7 )
 
+[node name="Denied" type="AudioStreamPlayer" parent="UI/MarginContainer/VBoxContainer/MenuEntries/MenuSelectionPointer/Sounds"]
+stream = ExtResource( 8 )
+
+[node name="Back" type="AudioStreamPlayer" parent="UI/MarginContainer/VBoxContainer/MenuEntries/MenuSelectionPointer/Sounds"]
+stream = ExtResource( 9 )
+
 [node name="MoreInfo" type="Control" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
+editor/display_folded = true
+margin_left = 1543.0
+margin_top = -7.0
+margin_right = 2928.0
+margin_bottom = 1491.0
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="README" type="RichTextLabel" parent="MoreInfo"]
-margin_left = 1570.0
-margin_top = -3.0
-margin_right = 3299.0
-margin_bottom = 2008.0
+margin_right = 1729.0
+margin_bottom = 2011.0
 rect_scale = Vector2( 0.8, 0.8 )
 custom_fonts/italics_font = SubResource( 5 )
 custom_fonts/bold_font = SubResource( 6 )
@@ -204,12 +212,13 @@ Feel free to share your opinions, feedback and suggestions:
 
 - Twitter: https://twitter.com/dav__cri
 - Blog: https://davcri.github.io/
+- email: davcri91@gmail.com
 - Instagram: https://www.instagram.com/crystal_bit/
 
-This game was developed as part of the Crystal Bit project:
+This game was developed as part of the Crystal Bitproject:
 
 - Github: https://github.com/crystal-bit
-- YouTube [ITA-only]: https://www.youtube.com/c/CrystalBit
+- YouTube [ITA-only]: https://twitter.com/dav__cri
 
 If you want to support me in other ways, you can buy me a coffee (I'm a coffee lover):
 
@@ -219,8 +228,7 @@ My content will always be released under an open source license."
 scroll_active = false
 
 [node name="Logo" type="Sprite" parent="MoreInfo"]
-position = Vector2( 3450, -410 )
+position = Vector2( 252, -274 )
 scale = Vector2( 0.820409, 0.820409 )
-texture = ExtResource( 11 )
-offset = Vector2( -2000.6, 136.891 )
+texture = ExtResource( 13 )
 

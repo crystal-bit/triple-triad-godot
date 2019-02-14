@@ -25,6 +25,8 @@ func _process(delta):
 		# if the menu is enabled
 		if selected_entry.modulate.a == 1:
 			print("Option selected: " + selected_entry.name)
+			if selected_entry.has_method("callback"):
+				selected_entry.callback()
 			# play confirm sound and load new scene
 			$Sounds/Confirm.play()
 		else:
