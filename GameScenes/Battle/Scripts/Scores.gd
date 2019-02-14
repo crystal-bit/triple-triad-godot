@@ -1,4 +1,4 @@
-extends Control
+extends Node
 
 
 func _ready():

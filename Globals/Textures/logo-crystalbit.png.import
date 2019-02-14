@@ -2,18 +2,19 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/iconfl01_15.png-71d9ea14280cb94a669d018af6560708.stex"
+path="res://.import/logo-crystalbit.png-1cd19c44499f603361536cab5ad3f52c.stex"
 
 [deps]
 
-source_file="res://GameScenes/Battle/Textures/iconfl01_15.png"
-dest_files=[ "res://.import/iconfl01_15.png-71d9ea14280cb94a669d018af6560708.stex" ]
+source_file="res://Globals/Textures/logo-crystalbit.png"
+dest_files=[ "res://.import/logo-crystalbit.png-1cd19c44499f603361536cab5ad3f52c.stex" ]
 
 [params]
 
 compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
+compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
 flags/filter=true
@@ -23,6 +24,7 @@ flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
+process/invert_color=false
 stream=false
 size_limit=0
 detect_3d=true
