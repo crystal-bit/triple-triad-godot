@@ -20,6 +20,10 @@ run/main_scene="res://GameScenes/Menu/MainMenu/MainMenu.tscn"
 config/icon="res://icon.png"
 run/name="TripleTriad"
 
+[autoload]
+
+SceneManager="*res://Globals/SceneManager/SceneManager.gd"
+
 [display]
 
 window/size/width=1536
