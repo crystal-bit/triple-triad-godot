@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://GameScenes/Menu/MainMenu/Scripts/MenuEntries.gd" type="Script" id=1]
 [ext_resource path="res://Globals/Fonts/Cinzel-Regular.ttf" type="DynamicFontData" id=2]
@@ -7,6 +7,10 @@
 [ext_resource path="res://Globals/Audio/cursor_move.wav" type="AudioStream" id=5]
 [ext_resource path="res://Globals/Audio/sound-invalid.wav" type="AudioStream" id=6]
 [ext_resource path="res://Globals/Audio/sound-back.wav" type="AudioStream" id=7]
+[ext_resource path="res://Globals/Fonts/ChakraPetch-Italic.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://Globals/Fonts/ChakraPetch-Bold.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://Globals/Fonts/ChakraPetch-Regular.ttf" type="DynamicFontData" id=10]
+[ext_resource path="res://Globals/Textures/logo-crystalbit.png" type="Texture" id=11]
 
 [sub_resource type="DynamicFontData" id=1]
 
@@ -28,6 +32,24 @@ flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 828, 0, 196, 113 )
 
+[sub_resource type="DynamicFont" id=5]
+
+size = 60
+use_filter = true
+font_data = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=6]
+
+size = 60
+use_filter = true
+font_data = ExtResource( 9 )
+
+[sub_resource type="DynamicFont" id=7]
+
+size = 60
+use_filter = true
+font_data = ExtResource( 10 )
+
 [node name="MainMenu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -38,6 +60,7 @@ __meta__ = {
 }
 
 [node name="Background" type="CanvasLayer" parent="."]
+editor/display_folded = true
 
 [node name="ColorRect" type="ColorRect" parent="Background"]
 anchor_right = 1.0
@@ -91,6 +114,7 @@ custom_fonts/font = SubResource( 3 )
 text = "Single Player"
 
 [node name="MultiPlayerLabel" type="Label" parent="UI/MarginContainer/VBoxContainer/MenuEntries"]
+modulate = Color( 1, 1, 1, 0.3 )
 margin_top = 220.0
 margin_right = 1136.0
 margin_bottom = 307.0
@@ -98,6 +122,7 @@ custom_fonts/font = SubResource( 3 )
 text = "Multiplayer Mode"
 
 [node name="OptionsLabel" type="Label" parent="UI/MarginContainer/VBoxContainer/MenuEntries"]
+modulate = Color( 1, 1, 1, 0.3 )
 margin_top = 307.0
 margin_right = 1136.0
 margin_bottom = 394.0
@@ -105,6 +130,7 @@ custom_fonts/font = SubResource( 3 )
 text = "Options"
 
 [node name="AboutLabel" type="Label" parent="UI/MarginContainer/VBoxContainer/MenuEntries"]
+modulate = Color( 1, 1, 1, 0.3 )
 margin_top = 394.0
 margin_right = 1136.0
 margin_bottom = 481.0
@@ -113,6 +139,7 @@ text = "About"
 
 [node name="SecretMenu" type="Label" parent="UI/MarginContainer/VBoxContainer/MenuEntries"]
 visible = false
+modulate = Color( 1, 1, 1, 0.3 )
 margin_top = 438.0
 margin_right = 1374.0
 margin_bottom = 525.0
@@ -121,13 +148,11 @@ text = "OOOOOH YOU FOUND THE SECRET MENU!"
 
 [node name="MenuSelectionPointer" type="Sprite" parent="UI/MarginContainer/VBoxContainer/MenuEntries"]
 editor/display_folded = true
-position = Vector2( -107, 243 )
+position = Vector2( -81, 177 )
 scale = Vector2( 0.4, 0.4 )
 z_index = 2
 texture = SubResource( 4 )
-centered = false
 script = ExtResource( 4 )
-menu_path = NodePath("..")
 
 [node name="Sounds" type="Node" parent="UI/MarginContainer/VBoxContainer/MenuEntries/MenuSelectionPointer"]
 
@@ -139,4 +164,63 @@ stream = ExtResource( 6 )
 
 [node name="Back" type="AudioStreamPlayer" parent="UI/MarginContainer/VBoxContainer/MenuEntries/MenuSelectionPointer/Sounds"]
 stream = ExtResource( 7 )
+
+[node name="MoreInfo" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="README" type="RichTextLabel" parent="MoreInfo"]
+margin_left = 1570.0
+margin_top = -3.0
+margin_right = 3299.0
+margin_bottom = 2008.0
+rect_scale = Vector2( 0.8, 0.8 )
+custom_fonts/italics_font = SubResource( 5 )
+custom_fonts/bold_font = SubResource( 6 )
+custom_fonts/normal_font = SubResource( 7 )
+bbcode_enabled = true
+bbcode_text = "Hi I'm [b]davcri[/b],
+I appreciate when people get in touch, it's a nice way to give support!
+Feel free to share your opinions, feedback and suggestions:
+
+- [b]Twitter[/b]: https://twitter.com/dav__cri
+- [b]Blog[/b]: https://davcri.github.io/
+- [b]email[/b]: davcri91@gmail.com
+- [b]Instagram[/b]: https://www.instagram.com/crystal_bit/
+
+This game was developed as part of the [i]Crystal Bit[/i]project:
+
+- [b]Github[/b]: https://github.com/crystal-bit
+- [b]YouTube [ITA-only][/b]: https://twitter.com/dav__cri
+
+If you want to support me in other ways, you can buy me a coffee (I'm a coffee lover):
+
+- [b]Paypal[/b]: paypal.me/davcr1
+
+[i]My content will always be released under an open source license.[/i]"
+text = "Hi I'm davcri,
+I appreciate when people get in touch, it's a nice way to give support!
+Feel free to share your opinions, feedback and suggestions:
+
+- Twitter: https://twitter.com/dav__cri
+- Blog: https://davcri.github.io/
+- Instagram: https://www.instagram.com/crystal_bit/
+
+This game was developed as part of the Crystal Bit project:
+
+- Github: https://github.com/crystal-bit
+- YouTube [ITA-only]: https://www.youtube.com/c/CrystalBit
+
+If you want to support me in other ways, you can buy me a coffee (I'm a coffee lover):
+
+- Paypal: paypal.me/davcr1
+
+My content will always be released under an open source license."
+scroll_active = false
+
+[node name="Logo" type="Sprite" parent="MoreInfo"]
+position = Vector2( 3450, -410 )
+scale = Vector2( 0.820409, 0.820409 )
+texture = ExtResource( 11 )
+offset = Vector2( -2000.6, 136.891 )
 

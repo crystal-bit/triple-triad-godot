@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://GameScenes/Battle/Textures/cardsmat/cardsmat_13.png" type="Texture" id=1]
 [ext_resource path="res://GameScenes/Battle/Textures/cardsmat/cardsmat_1.png" type="Texture" id=2]
@@ -21,7 +21,7 @@
 [ext_resource path="res://Globals/Textures/cardstext_13-edit.png" type="Texture" id=19]
 [ext_resource path="res://GameScenes/Battle/Scripts/ScoreTexture.gd" type="Script" id=20]
 [ext_resource path="res://GameScenes/Battle/Scripts/Results.gd" type="Script" id=21]
-
+[ext_resource path="res://GameScenes/Battle/Audio/Shuffle or Boogie.wav" type="AudioStream" id=22]
 
 [sub_resource type="AtlasTexture" id=1]
 
@@ -136,13 +136,20 @@ tracks/0/keys = {
 }
 
 [node name="Battle" type="Control"]
+rect_pivot_offset = Vector2( 2530, 50 )
 __meta__ = {
 "_edit_horizontal_guides_": [ 64.0, 832.0 ],
+"_edit_lock_": true,
 "_edit_vertical_guides_": [ 384.0, 1152.0 ]
 }
 
 [node name="BackroundTextures" type="Control" parent="."]
 editor/display_folded = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="CardsmatLeft" type="TextureRect" parent="BackroundTextures"]
 margin_right = 1024.0
@@ -156,6 +163,7 @@ margin_bottom = 1024.0
 texture = ExtResource( 2 )
 
 [node name="Field" type="GridContainer" parent="."]
+editor/display_folded = true
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -328,6 +336,7 @@ covered = true
 owned_by_player = false
 
 [node name="Container1" type="Container" parent="Player2Cards"]
+editor/display_folded = true
 margin_top = 129.0
 margin_right = 238.0
 margin_bottom = 508.0
@@ -380,10 +389,8 @@ owned_by_player = false
 
 [node name="Tween" type="Tween" parent="Player2Cards"]
 
-[node name="GameLogic" type="Control" parent="."]
+[node name="GameLogic" type="Node" parent="."]
 editor/display_folded = true
-margin_right = 40.0
-margin_bottom = 40.0
 script = ExtResource( 8 )
 field_path = NodePath("../Field")
 
@@ -435,10 +442,8 @@ margin_bottom = 561.0
 rect_scale = Vector2( 0.5, 0.5 )
 texture = SubResource( 2 )
 
-[node name="Scores" type="Control" parent="."]
+[node name="Scores" type="Node" parent="."]
 editor/display_folded = true
-margin_right = 40.0
-margin_bottom = 40.0
 script = ExtResource( 18 )
 
 [node name="Player1Score" type="TextureRect" parent="Scores"]
@@ -467,14 +472,17 @@ anims/fade_from_black = SubResource( 5 )
 anims/fade_to_black = SubResource( 6 )
 
 [node name="Results" type="CanvasLayer" parent="."]
+editor/display_folded = true
 script = ExtResource( 21 )
 
 [node name="CenterContainer" type="CenterContainer" parent="Results"]
+editor/display_folded = true
 modulate = Color( 1, 1, 1, 0 )
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 46.0135
-margin_right = 46.0135
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="WinTexture" type="TextureRect" parent="Results/CenterContainer"]
 visible = false
@@ -504,6 +512,10 @@ texture = SubResource( 10 )
 anims/fade_in = SubResource( 11 )
 anims/fade_out = SubResource( 12 )
 
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 22 )
+autoplay = true
+
 [connection signal="match_ended" from="Field" to="GameLogic" method="_on_Field_match_ended"]
 [connection signal="turn_finished" from="Player2Cards" to="GameLogic" method="_on_Player2Cards_turn_finished"]
 [connection signal="turn_finished" from="Player2Cards" to="GameLogic/SelectionPointer" method="_on_Player2Cards_turn_finished"]
@@ -512,6 +524,6 @@ anims/fade_out = SubResource( 12 )
 [connection signal="new_card_pointed" from="GameLogic/SelectionPointer/State/SelectingCard" to="Player1Cards" method="_on_SelectingCard_new_card_pointed"]
 [connection signal="change_to_idle_state" from="GameLogic/SelectionPointer/State/CardSelected" to="GameLogic/SelectionPointer" method="_on_CardSelected_change_to_idle_state"]
 [connection signal="place_card" from="GameLogic/SelectionPointer/State/CardSelected" to="Player2Cards" method="_on_CardSelected_place_card"]
-[connection signal="place_card" from="GameLogic/SelectionPointer/State/CardSelected" to="Player1Cards" method="_on_CardSelected_place_card"]
 [connection signal="place_card" from="GameLogic/SelectionPointer/State/CardSelected" to="GameLogic" method="_on_CardSelected_place_card"]
+[connection signal="place_card" from="GameLogic/SelectionPointer/State/CardSelected" to="Player1Cards" method="_on_CardSelected_place_card"]
 [connection signal="return_to_card_selection" from="GameLogic/SelectionPointer/State/CardSelected" to="GameLogic/SelectionPointer" method="_on_CardSelected_return_to_card_selection"]
