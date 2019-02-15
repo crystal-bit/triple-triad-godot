@@ -1,14 +1,18 @@
-# TripleTriad made with Godot 3.0
+# Triple Triad re-made with Godot 3.1
 
-![TripleTriad in Godot screenshot](https://imgur.com/RwKigsz.jpg)
+![Triple Triad in Godot screenshot](https://imgur.com/RwKigsz.jpg)
 
-I love Final Fantasy.  
-I loved FFVIII.  
-I loved Triple Triad.  
-I had this question: *"How difficult it is to recreate the Triple Triad card game with the Godot Engine?"*
+> *"How difficult it is to recreate the Triple Triad card game with the Godot Engine?"*
 
 This repository is the answer to my question: the core of the game has been developed during [my Devember 2018 challenge](https://davcri.github.io/posts/devember2018-retrospective/) (a challenge where
 you have to code each day of December for at least 1 hour).
+
+## Tutorials
+
+If you speak Italian, you can find a list of video tutorials
+about this project in the [tutorials/README.md file](./tutorials/README.md).
+
+---
 
 ## What is implemented
 
@@ -21,9 +25,11 @@ you have to code each day of December for at least 1 hour).
 
 ## How to run the game
 
-You can download a prebuilt executable for Windows/OSX/Linux from the [release page](https://github.com/crystal-bit/triple-triad-godot/releases/latest)
+### From an executable
 
-Or you can:
+You can download a prebuilt executable for Windows/OSX/Linux from the [release page](https://github.com/crystal-bit/triple-triad-godot/releases/latest).
+
+### From source (using Godot)
 
 1. [Download Godot Engine](https://godotengine.org/download/) (the game was developer with v3.0.6)
 2. Download this project
@@ -32,17 +38,14 @@ Or you can:
    1. Select `Scan`
    2. Select the project folder
    3. Double click on Triple Triad
+5. Run the game by clicking on the *Play* button (or use the <kbd>F5</kbd> key for a shortcut)!
+
 
 ## Input Controls
 
 - `Arrow keys` to move the cursor
 - `Space/Enter` to confirm
 - `Backspace` to cancel
-
-## TODO
-
-- Improve AI
-- Port the project to Godot 3.1
 
 ## Contributing
 
