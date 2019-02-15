@@ -1,11 +1,11 @@
-# Video Tutorials (only in Italian)
+# Video Tutorials
 
 This project is currently being used as a base for video
 tutorials on the Crystal Bit YouTube channel.
 
-# GUI (Control nodes)
+# GUI & Control nodes
 
-## 1/3 Creare layout menu principale 
+## Creare menu principale pt.1: layout
 
 <p align="center">
   <img width="60%" src="https://imgur.com/ZjTXc1r.png">
@@ -20,6 +20,10 @@ tutorials on the Crystal Bit YouTube channel.
 - Font Cinzel: https://fonts.google.com/specimen/Cinzel
 - Hand sprite: FF VIII assets (*not free to use*)
 
-## 2/3 Puntatore (TODO)
+## Creare menu pt.2: puntatore (TODO)
 
-## 3/3 SceneManager, cambio scene con autoload
+...
+
+## Creare menu pt.3: SceneManager, cambio scene con autoload (TODO)
+
+...
