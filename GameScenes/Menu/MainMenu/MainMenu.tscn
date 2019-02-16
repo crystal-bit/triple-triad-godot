@@ -170,7 +170,6 @@ stream = ExtResource( 8 )
 stream = ExtResource( 9 )
 
 [node name="MoreInfo" type="Control" parent="."]
-editor/display_folded = true
 margin_left = 1543.0
 margin_top = -7.0
 margin_right = 2928.0
@@ -196,10 +195,10 @@ Feel free to share your opinions, feedback and suggestions:
 - [b]email[/b]: davcri91@gmail.com
 - [b]Instagram[/b]: https://www.instagram.com/crystal_bit/
 
-This game was developed as part of the [i]Crystal Bit[/i]project:
+This game was developed as part of the [b]Crystal Bit[/b] project:
 
 - [b]Github[/b]: https://github.com/crystal-bit
-- [b]YouTube [ITA-only][/b]: https://twitter.com/dav__cri
+- [b]YouTube [ITA-only][/b]: https://www.youtube.com/c/CrystalBit
 
 If you want to support me in other ways, you can buy me a coffee (I'm a coffee lover):
 
@@ -215,10 +214,10 @@ Feel free to share your opinions, feedback and suggestions:
 - email: davcri91@gmail.com
 - Instagram: https://www.instagram.com/crystal_bit/
 
-This game was developed as part of the Crystal Bitproject:
+This game was developed as part of the Crystal Bit project:
 
 - Github: https://github.com/crystal-bit
-- YouTube [ITA-only]: https://twitter.com/dav__cri
+- YouTube [ITA-only]: https://www.youtube.com/c/CrystalBit
 
 If you want to support me in other ways, you can buy me a coffee (I'm a coffee lover):
 
