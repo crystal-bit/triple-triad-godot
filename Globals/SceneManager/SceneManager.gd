@@ -42,3 +42,18 @@ func load_node(node_scene_path):
 	var new_node_scene = load(node_scene_path)
 	var new_node = new_node_scene.instance()
 	return new_node
+	
+
+func reparent_node_to(node: Node, new_parent: Node):
+	""" Reparent a node.
+	You can call this metod from a node to reparent it:
+		SceneManager.reparent_node_to(item, player)
+	"""
+	var old_parent = node.get_parent()
+	old_parent.remove_child(node)
+	# TODO: free memory?
+	new_parent.add_child(node)
+	
+	
+	
+	
