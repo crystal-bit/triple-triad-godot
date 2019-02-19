@@ -7,6 +7,7 @@ func _ready():
 	$CenterContainer/LoseTexture.hide()
 	$CenterContainer/DrawTexture.hide()
 
+
 func show_texture(texture_string):
 	$AnimationPlayer.play("fade_in")
 	if texture_string == "win":

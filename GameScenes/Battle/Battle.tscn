@@ -390,7 +390,6 @@ owned_by_player = false
 [node name="Tween" type="Tween" parent="Player2Cards"]
 
 [node name="GameLogic" type="Node" parent="."]
-editor/display_folded = true
 script = ExtResource( 8 )
 field_path = NodePath("../Field")
 
@@ -404,6 +403,7 @@ texture = SubResource( 2 )
 script = ExtResource( 10 )
 
 [node name="State" type="Node" parent="GameLogic/SelectionPointer"]
+editor/display_folded = true
 
 [node name="SelectingCard" type="Node" parent="GameLogic/SelectionPointer/State"]
 script = ExtResource( 11 )
@@ -523,7 +523,7 @@ autoplay = true
 [connection signal="card_selected" from="GameLogic/SelectionPointer/State/SelectingCard" to="GameLogic/SelectionPointer" method="_on_SelectingCard_card_selected"]
 [connection signal="new_card_pointed" from="GameLogic/SelectionPointer/State/SelectingCard" to="Player1Cards" method="_on_SelectingCard_new_card_pointed"]
 [connection signal="change_to_idle_state" from="GameLogic/SelectionPointer/State/CardSelected" to="GameLogic/SelectionPointer" method="_on_CardSelected_change_to_idle_state"]
-[connection signal="place_card" from="GameLogic/SelectionPointer/State/CardSelected" to="Player2Cards" method="_on_CardSelected_place_card"]
-[connection signal="place_card" from="GameLogic/SelectionPointer/State/CardSelected" to="GameLogic" method="_on_CardSelected_place_card"]
 [connection signal="place_card" from="GameLogic/SelectionPointer/State/CardSelected" to="Player1Cards" method="_on_CardSelected_place_card"]
+[connection signal="place_card" from="GameLogic/SelectionPointer/State/CardSelected" to="GameLogic" method="_on_CardSelected_place_card"]
+[connection signal="place_card" from="GameLogic/SelectionPointer/State/CardSelected" to="Player2Cards" method="_on_CardSelected_place_card"]
 [connection signal="return_to_card_selection" from="GameLogic/SelectionPointer/State/CardSelected" to="GameLogic/SelectionPointer" method="_on_CardSelected_return_to_card_selection"]

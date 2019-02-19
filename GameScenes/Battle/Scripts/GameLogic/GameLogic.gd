@@ -58,10 +58,11 @@ func _capture_cards(card_positioned_at, turn_data):
 					card_on_side.capture()
 					emit_signal("player_captured_a_card", turn_data["player_in_turn"])
 	
+
 func _attacking_card_wins(attacking_card, defending_card, side):
-	""" Checks if the first card "captures" the defending card on a given side.
-	Returns true if the defending_card is captured.
-	"""
+	""" Checks if the first card captures the defending card on a given side.
+	Returns true if the defending_card is captured."""
+
 	if side == "right":
 		return attacking_card.get_card_attributes().right > defending_card.get_card_attributes().left
 	elif side == "left":
@@ -86,6 +87,7 @@ func _on_Player2Cards_turn_finished(card_positioned_at):
 	_capture_cards(card_positioned_at, {"player_in_turn": 2})
 	$SelectionPointer._change_state($SelectionPointer/State/SelectingCard, null)
 
+
 func _on_Field_match_ended():
 	# wait 1 second
 	yield(get_tree().create_timer(1), "timeout")
@@ -102,7 +104,4 @@ func _on_Field_match_ended():
 	yield(get_tree().create_timer(0.25), "timeout")
 	get_parent().get_node("Results").show_texture(texture_to_show)
 	yield(get_tree().create_timer(1.5), "timeout")
-	get_parent().get_node("Fade/AnimationPlayer").play("fade_to_black")
 	get_tree().reload_current_scene()
-	
-	
