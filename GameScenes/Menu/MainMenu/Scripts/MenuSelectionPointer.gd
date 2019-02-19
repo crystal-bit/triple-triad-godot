@@ -1,16 +1,17 @@
 extends Sprite
 
-onready var menu_entries: Node = get_parent()
+onready var current_menu: Node = get_parent()
 var entries = []
 var current_position_index
 
 
 func _ready():
+	# reset array (needed when re-initializing the node)
+	entries = []
 	# save references to menu entry nodes
-	for entry in menu_entries.get_children():
+	for entry in current_menu.get_children():
 		if entry.visible and entry is Label:
 			entries.append(entry)
-	
 	set_current_position(0)
 
 
@@ -50,6 +51,15 @@ func set_current_position(new_pos):
 		return false  # Cursor was not moved
 
 
+func set_current_menu(new_menu: Node):
+	current_menu = new_menu
+	# reparent node
+	SceneManager.reparent_node_to(self, new_menu)
+	# new_menu.add_child(self)
+	# re-init node
+	_ready()
+	
+
 func move_down():	
 	if set_current_position(current_position_index + 1):
 		$Sounds/Confirm.play()
@@ -58,3 +68,6 @@ func move_down():
 func move_up():
 	if set_current_position(current_position_index - 1):
 		$Sounds/Confirm.play()
+
+func _on_SinglePlayerLabel_menu_changed(menu: Node):
+	set_current_menu(menu)
