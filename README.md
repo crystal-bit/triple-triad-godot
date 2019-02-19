@@ -31,7 +31,7 @@ You can download a prebuilt executable for Windows/OSX/Linux from the [release p
 
 ### From source (using Godot)
 
-1. [Download Godot Engine](https://godotengine.org/download/) (the game was developer with v3.0.6)
+1. [Download Godot Engine](https://godotengine.org/download/) 
 2. Download this project
 3. Launch Godot Engine
 4. Import the project into Godot
