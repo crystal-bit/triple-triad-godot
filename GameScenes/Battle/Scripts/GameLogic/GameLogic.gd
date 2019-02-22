@@ -13,7 +13,7 @@ var custom_rules = {
 func _ready():
 	pass
 
-func _capture_cards(card_positioned_at, turn_data):
+func _capture_cards(card_positioned_at: Vector2, turn_data: Dictionary):
 	# TODO change these magic costants to global constants
 	assert card_positioned_at.x >= 0
 	assert card_positioned_at.y >= 0
