@@ -12,7 +12,15 @@ signal battle_ended()
 
 
 func _on_Field_match_ended():
-	emit_signal("battle_ended", _get_match_result())
+	var match_result = _get_match_result()
+	# update global values
+	if match_result == WIN:
+		GlobalState.matches_stats["won"] += 1
+	elif match_result == LOSE:
+		GlobalState.matches_stats["lost"] += 1
+	elif match_result == DRAW:
+		GlobalState.matches_stats["drawn"] += 1
+	emit_signal("battle_ended", match_result)
 
 
 func _get_match_result() -> int:
