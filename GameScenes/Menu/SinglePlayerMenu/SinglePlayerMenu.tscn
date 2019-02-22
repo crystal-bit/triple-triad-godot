@@ -15,12 +15,12 @@ font_path = "res://Globals/Fonts/Cinzel-Bold.ttf"
 size = 64
 font_data = SubResource( 1 )
 
-[sub_resource type="AtlasTexture" id=4]
+[sub_resource type="AtlasTexture" id=3]
 flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 828, 0, 196, 113 )
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=4]
 size = 40
 font_data = ExtResource( 7 )
 
@@ -73,7 +73,7 @@ editor/display_folded = true
 position = Vector2( 148, 193 )
 scale = Vector2( 0.4, 0.4 )
 z_index = 2
-texture = SubResource( 4 )
+texture = SubResource( 3 )
 
 [node name="Sounds" type="Node" parent="UI/MarginContainer/VBoxContainer/MenuSelectionPointer"]
 editor/display_folded = true
@@ -109,7 +109,8 @@ margin_right = 636.0
 margin_bottom = 133.0
 custom_icons/off = ExtResource( 5 )
 custom_icons/on = ExtResource( 6 )
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 4 )
+disabled = true
 pressed = true
 text = "Random"
 
@@ -119,7 +120,8 @@ margin_right = 636.0
 margin_bottom = 199.0
 custom_icons/off = ExtResource( 5 )
 custom_icons/on = ExtResource( 6 )
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 4 )
+disabled = true
 text = "Open"
 
 [node name="SuddenDeath" type="CheckButton" parent="UI/MarginContainer/VBoxContainer/MarginContainer/Rules"]
@@ -128,7 +130,8 @@ margin_right = 636.0
 margin_bottom = 265.0
 custom_icons/off = ExtResource( 5 )
 custom_icons/on = ExtResource( 6 )
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 4 )
+disabled = true
 text = "Sudden Death"
 
 [node name="Same" type="CheckButton" parent="UI/MarginContainer/VBoxContainer/MarginContainer/Rules"]
@@ -137,7 +140,8 @@ margin_right = 636.0
 margin_bottom = 331.0
 custom_icons/off = ExtResource( 5 )
 custom_icons/on = ExtResource( 6 )
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 4 )
+disabled = true
 text = "Same"
 
 [node name="Same Wall" type="CheckButton" parent="UI/MarginContainer/VBoxContainer/MarginContainer/Rules"]
@@ -146,7 +150,8 @@ margin_right = 636.0
 margin_bottom = 397.0
 custom_icons/off = ExtResource( 5 )
 custom_icons/on = ExtResource( 6 )
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 4 )
+disabled = true
 text = "Same Wall"
 
 [node name="Plus" type="CheckButton" parent="UI/MarginContainer/VBoxContainer/MarginContainer/Rules"]
@@ -155,7 +160,8 @@ margin_right = 636.0
 margin_bottom = 463.0
 custom_icons/off = ExtResource( 5 )
 custom_icons/on = ExtResource( 6 )
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 4 )
+disabled = true
 text = "Plus"
 
 [node name="Elemental" type="CheckButton" parent="UI/MarginContainer/VBoxContainer/MarginContainer/Rules"]
@@ -164,7 +170,8 @@ margin_right = 636.0
 margin_bottom = 529.0
 custom_icons/off = ExtResource( 5 )
 custom_icons/on = ExtResource( 6 )
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 4 )
+disabled = true
 text = "Elemental"
 
 [node name="TextureButton" type="TextureButton" parent="UI/MarginContainer/VBoxContainer/MarginContainer/Rules"]
