@@ -9,7 +9,7 @@
 [ext_resource path="res://Globals/Audio/sound-invalid.wav" type="AudioStream" id=7]
 [ext_resource path="res://Globals/Audio/sound-back.wav" type="AudioStream" id=8]
 [ext_resource path="res://GameScenes/Menu/MainMenu/Scripts/QuickMatch.gd" type="Script" id=9]
-[ext_resource path="res://GameScenes/Battle/Battle.tscn" type="PackedScene" id=10]
+[ext_resource path="res://GameScenes/Game/Game.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Globals/Fonts/ChakraPetch-Italic.ttf" type="DynamicFontData" id=11]
 [ext_resource path="res://Globals/Fonts/ChakraPetch-Bold.ttf" type="DynamicFontData" id=12]
 [ext_resource path="res://Globals/Fonts/ChakraPetch-Regular.ttf" type="DynamicFontData" id=13]
@@ -56,7 +56,6 @@ __meta__ = {
 }
 
 [node name="Background" type="CanvasLayer" parent="."]
-editor/display_folded = true
 
 [node name="ColorRect" type="ColorRect" parent="Background"]
 anchor_right = 1.0
@@ -93,6 +92,7 @@ TRIPLE TRIAD"
 align = 1
 
 [node name="MenuEntries" type="VBoxContainer" parent="UI/MarginContainer/VBoxContainer"]
+editor/display_folded = true
 margin_top = 181.0
 margin_right = 1136.0
 margin_bottom = 796.0

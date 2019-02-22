@@ -1,142 +1,52 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=27 format=2]
 
-[ext_resource path="res://GameScenes/Battle/Textures/cardsmat/cardsmat_13.png" type="Texture" id=1]
-[ext_resource path="res://GameScenes/Battle/Textures/cardsmat/cardsmat_1.png" type="Texture" id=2]
-[ext_resource path="res://GameScenes/Battle/Scripts/Field.gd" type="Script" id=3]
-[ext_resource path="res://GameScenes/Battle/Scripts/Player1Cards.gd" type="Script" id=4]
-[ext_resource path="res://GameObjects/Card/Card.tscn" type="PackedScene" id=5]
-[ext_resource path="res://GameObjects/Card/Textures/cards_0.png" type="Texture" id=6]
-[ext_resource path="res://GameScenes/Battle/Scripts/Player2Cards.gd" type="Script" id=7]
-[ext_resource path="res://GameScenes/Battle/Scripts/GameLogic/GameLogic.gd" type="Script" id=8]
-[ext_resource path="res://Globals/Textures/iconfl01_15.png" type="Texture" id=9]
-[ext_resource path="res://GameScenes/Battle/Scripts/GameLogic/SelectionPointer/SelectionPointer.gd" type="Script" id=10]
-[ext_resource path="res://GameScenes/Battle/Scripts/GameLogic/SelectionPointer/States/SelectingCard.gd" type="Script" id=11]
-[ext_resource path="res://GameScenes/Battle/Scripts/GameLogic/SelectionPointer/States/CardSelected.gd" type="Script" id=12]
-[ext_resource path="res://GameScenes/Battle/Scripts/GameLogic/SelectionPointer/States/Idle.gd" type="Script" id=13]
-[ext_resource path="res://Globals/Audio/cursor_move.wav" type="AudioStream" id=14]
-[ext_resource path="res://GameScenes/Battle/Audio/sound-card.wav" type="AudioStream" id=15]
-[ext_resource path="res://Globals/Audio/sound-back.wav" type="AudioStream" id=16]
-[ext_resource path="res://Globals/Audio/sound-invalid.wav" type="AudioStream" id=17]
-[ext_resource path="res://GameScenes/Battle/Scripts/Scores.gd" type="Script" id=18]
-[ext_resource path="res://Globals/Textures/cardstext_13-edit.png" type="Texture" id=19]
-[ext_resource path="res://GameScenes/Battle/Scripts/ScoreTexture.gd" type="Script" id=20]
-[ext_resource path="res://GameScenes/Battle/Scripts/Results.gd" type="Script" id=21]
+[ext_resource path="res://GameScenes/Battle/Scripts/Battle.gd" type="Script" id=1]
+[ext_resource path="res://GameScenes/Battle/Textures/cardsmat/cardsmat_13.png" type="Texture" id=2]
+[ext_resource path="res://GameScenes/Battle/Textures/cardsmat/cardsmat_1.png" type="Texture" id=3]
+[ext_resource path="res://GameScenes/Battle/Scripts/Field.gd" type="Script" id=4]
+[ext_resource path="res://GameScenes/Battle/Scripts/Player1Cards.gd" type="Script" id=5]
+[ext_resource path="res://GameObjects/Card/Card.tscn" type="PackedScene" id=6]
+[ext_resource path="res://GameObjects/Card/Textures/cards_0.png" type="Texture" id=7]
+[ext_resource path="res://GameScenes/Battle/Scripts/Player2Cards.gd" type="Script" id=8]
+[ext_resource path="res://GameScenes/Battle/Scripts/GameLogic/GameLogic.gd" type="Script" id=9]
+[ext_resource path="res://Globals/Textures/iconfl01_15.png" type="Texture" id=10]
+[ext_resource path="res://GameScenes/Battle/Scripts/GameLogic/SelectionPointer/SelectionPointer.gd" type="Script" id=11]
+[ext_resource path="res://GameScenes/Battle/Scripts/GameLogic/SelectionPointer/States/SelectingCard.gd" type="Script" id=12]
+[ext_resource path="res://GameScenes/Battle/Scripts/GameLogic/SelectionPointer/States/CardSelected.gd" type="Script" id=13]
+[ext_resource path="res://GameScenes/Battle/Scripts/GameLogic/SelectionPointer/States/Idle.gd" type="Script" id=14]
+[ext_resource path="res://Globals/Audio/cursor_move.wav" type="AudioStream" id=15]
+[ext_resource path="res://GameScenes/Battle/Audio/sound-card.wav" type="AudioStream" id=16]
+[ext_resource path="res://Globals/Audio/sound-back.wav" type="AudioStream" id=17]
+[ext_resource path="res://Globals/Audio/sound-invalid.wav" type="AudioStream" id=18]
+[ext_resource path="res://GameScenes/Battle/Scripts/Scores.gd" type="Script" id=19]
+[ext_resource path="res://Globals/Textures/cardstext_13-edit.png" type="Texture" id=20]
+[ext_resource path="res://GameScenes/Battle/Scripts/ScoreTexture.gd" type="Script" id=21]
 [ext_resource path="res://GameScenes/Battle/Audio/Shuffle or Boogie.wav" type="AudioStream" id=22]
 
 [sub_resource type="AtlasTexture" id=1]
-
 flags = 4
-atlas = ExtResource( 6 )
+atlas = ExtResource( 7 )
 region = Rect2( 0, 0, 256, 256 )
 filter_clip = true
 
 [sub_resource type="AtlasTexture" id=2]
-
 flags = 4
-atlas = ExtResource( 9 )
+atlas = ExtResource( 10 )
 region = Rect2( 828, 0, 196, 113 )
 
 [sub_resource type="AtlasTexture" id=3]
-
 flags = 4
-atlas = ExtResource( 19 )
+atlas = ExtResource( 20 )
 region = Rect2( 0, 190, 100, 100 )
 
 [sub_resource type="AtlasTexture" id=4]
-
 flags = 4
-atlas = ExtResource( 19 )
+atlas = ExtResource( 20 )
 region = Rect2( 0, 190, 100, 100 )
-
-[sub_resource type="Animation" id=5]
-
-resource_name = "fade_from_black"
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
-}
-
-[sub_resource type="Animation" id=6]
-
-resource_name = "fade_to_black"
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ) ]
-}
-
-[sub_resource type="StreamTexture" id=7]
-
-flags = 4
-load_path = "res://.import/cardstext_14.png-bf399ca8e73133f91cbb4d7246dd44f0.stex"
-
-[sub_resource type="AtlasTexture" id=8]
-
-flags = 4
-atlas = SubResource( 7 )
-region = Rect2( 0, 0, 1000, 200 )
-
-[sub_resource type="AtlasTexture" id=9]
-
-flags = 4
-atlas = SubResource( 7 )
-region = Rect2( 0, 200, 1000, 200 )
-
-[sub_resource type="AtlasTexture" id=10]
-
-flags = 4
-atlas = SubResource( 7 )
-region = Rect2( 0, 400, 1000, 200 )
-
-[sub_resource type="Animation" id=11]
-
-resource_name = "fade_in"
-tracks/0/type = "value"
-tracks/0/path = NodePath("CenterContainer:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
-}
-
-[sub_resource type="Animation" id=12]
-
-resource_name = "fade_out"
-tracks/0/type = "value"
-tracks/0/path = NodePath("CenterContainer:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
-}
 
 [node name="Battle" type="Control"]
 rect_pivot_offset = Vector2( 2530, 50 )
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_horizontal_guides_": [ 64.0, 832.0 ],
 "_edit_lock_": true,
@@ -154,13 +64,13 @@ __meta__ = {
 [node name="CardsmatLeft" type="TextureRect" parent="BackroundTextures"]
 margin_right = 1024.0
 margin_bottom = 1024.0
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 
 [node name="CardsmatRight" type="TextureRect" parent="BackroundTextures"]
 margin_left = 1024.0
 margin_right = 1536.0
 margin_bottom = 1024.0
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 
 [node name="Field" type="GridContainer" parent="."]
 editor/display_folded = true
@@ -176,7 +86,7 @@ size_flags_vertical = 0
 custom_constants/vseparation = 16
 custom_constants/hseparation = 16
 columns = 3
-script = ExtResource( 3 )
+script = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -255,7 +165,7 @@ margin_top = 64.0
 margin_right = 288.0
 margin_bottom = 960.0
 custom_constants/separation = -250
-script = ExtResource( 4 )
+script = ExtResource( 5 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -266,7 +176,7 @@ margin_bottom = 379.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Card" parent="Player1Cards/Container0" instance=ExtResource( 5 )]
+[node name="Card" parent="Player1Cards/Container0" instance=ExtResource( 6 )]
 card_id = 66
 
 [node name="Container1" type="Container" parent="Player1Cards"]
@@ -276,7 +186,7 @@ margin_bottom = 508.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Card" parent="Player1Cards/Container1" instance=ExtResource( 5 )]
+[node name="Card" parent="Player1Cards/Container1" instance=ExtResource( 6 )]
 texture_normal = SubResource( 1 )
 
 [node name="Container2" type="Container" parent="Player1Cards"]
@@ -286,7 +196,7 @@ margin_bottom = 637.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Card" parent="Player1Cards/Container2" instance=ExtResource( 5 )]
+[node name="Card" parent="Player1Cards/Container2" instance=ExtResource( 6 )]
 card_id = 43
 
 [node name="Container3" type="Container" parent="Player1Cards"]
@@ -296,7 +206,7 @@ margin_bottom = 766.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Card" parent="Player1Cards/Container3" instance=ExtResource( 5 )]
+[node name="Card" parent="Player1Cards/Container3" instance=ExtResource( 6 )]
 card_id = 7
 
 [node name="Container4" type="Container" parent="Player1Cards"]
@@ -306,7 +216,7 @@ margin_bottom = 896.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Card" parent="Player1Cards/Container4" instance=ExtResource( 5 )]
+[node name="Card" parent="Player1Cards/Container4" instance=ExtResource( 6 )]
 card_id = 102
 
 [node name="Tween" type="Tween" parent="Player1Cards"]
@@ -318,7 +228,7 @@ margin_top = 64.0
 margin_right = 1484.0
 margin_bottom = 960.0
 custom_constants/separation = -250
-script = ExtResource( 7 )
+script = ExtResource( 8 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -331,7 +241,7 @@ margin_bottom = 379.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Card" parent="Player2Cards/Container0" instance=ExtResource( 5 )]
+[node name="Card" parent="Player2Cards/Container0" instance=ExtResource( 6 )]
 covered = true
 owned_by_player = false
 
@@ -343,7 +253,7 @@ margin_bottom = 508.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Card" parent="Player2Cards/Container1" instance=ExtResource( 5 )]
+[node name="Card" parent="Player2Cards/Container1" instance=ExtResource( 6 )]
 card_id = 6
 covered = true
 owned_by_player = false
@@ -356,7 +266,7 @@ margin_bottom = 637.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Card" parent="Player2Cards/Container2" instance=ExtResource( 5 )]
+[node name="Card" parent="Player2Cards/Container2" instance=ExtResource( 6 )]
 card_id = 7
 covered = true
 owned_by_player = false
@@ -369,7 +279,7 @@ margin_bottom = 766.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Card" parent="Player2Cards/Container3" instance=ExtResource( 5 )]
+[node name="Card" parent="Player2Cards/Container3" instance=ExtResource( 6 )]
 card_id = 8
 covered = true
 owned_by_player = false
@@ -382,7 +292,7 @@ margin_bottom = 896.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Card" parent="Player2Cards/Container4" instance=ExtResource( 5 )]
+[node name="Card" parent="Player2Cards/Container4" instance=ExtResource( 6 )]
 card_id = 101
 covered = true
 owned_by_player = false
@@ -390,7 +300,8 @@ owned_by_player = false
 [node name="Tween" type="Tween" parent="Player2Cards"]
 
 [node name="GameLogic" type="Node" parent="."]
-script = ExtResource( 8 )
+editor/display_folded = true
+script = ExtResource( 9 )
 field_path = NodePath("../Field")
 
 [node name="SelectionPointer" type="TextureRect" parent="GameLogic"]
@@ -400,38 +311,37 @@ margin_right = 639.0
 margin_bottom = 261.0
 rect_scale = Vector2( -0.5, 0.5 )
 texture = SubResource( 2 )
-script = ExtResource( 10 )
+script = ExtResource( 11 )
 
 [node name="State" type="Node" parent="GameLogic/SelectionPointer"]
-editor/display_folded = true
 
 [node name="SelectingCard" type="Node" parent="GameLogic/SelectionPointer/State"]
-script = ExtResource( 11 )
+script = ExtResource( 12 )
 cards_container_node_path = NodePath("../../../../Player1Cards")
 
 [node name="CardSelected" type="Node" parent="GameLogic/SelectionPointer/State"]
-script = ExtResource( 12 )
+script = ExtResource( 13 )
 field_selection_pointer_path = NodePath("../../../FieldSelectionPointer")
 player_cards_path = NodePath("../../../../Player1Cards")
 field_path = NodePath("../../../../Field")
 
 [node name="Idle" type="Node" parent="GameLogic/SelectionPointer/State"]
-script = ExtResource( 13 )
+script = ExtResource( 14 )
 
 [node name="Audio" type="Node" parent="GameLogic/SelectionPointer"]
 editor/display_folded = true
 
 [node name="CursorMove" type="AudioStreamPlayer" parent="GameLogic/SelectionPointer/Audio"]
-stream = ExtResource( 14 )
-
-[node name="CardMove" type="AudioStreamPlayer" parent="GameLogic/SelectionPointer/Audio"]
 stream = ExtResource( 15 )
 
-[node name="Cancel" type="AudioStreamPlayer" parent="GameLogic/SelectionPointer/Audio"]
+[node name="CardMove" type="AudioStreamPlayer" parent="GameLogic/SelectionPointer/Audio"]
 stream = ExtResource( 16 )
 
-[node name="Invalid" type="AudioStreamPlayer" parent="GameLogic/SelectionPointer/Audio"]
+[node name="Cancel" type="AudioStreamPlayer" parent="GameLogic/SelectionPointer/Audio"]
 stream = ExtResource( 17 )
+
+[node name="Invalid" type="AudioStreamPlayer" parent="GameLogic/SelectionPointer/Audio"]
+stream = ExtResource( 18 )
 
 [node name="FieldSelectionPointer" type="TextureRect" parent="GameLogic"]
 visible = false
@@ -442,9 +352,11 @@ margin_bottom = 561.0
 rect_scale = Vector2( 0.5, 0.5 )
 texture = SubResource( 2 )
 
-[node name="Scores" type="Node" parent="."]
+[node name="Scores" type="Control" parent="."]
 editor/display_folded = true
-script = ExtResource( 18 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 19 )
 
 [node name="Player1Score" type="TextureRect" parent="Scores"]
 margin_left = 112.0
@@ -453,7 +365,7 @@ margin_right = 224.0
 margin_bottom = 880.0
 texture = SubResource( 3 )
 expand = true
-script = ExtResource( 20 )
+script = ExtResource( 21 )
 
 [node name="Player2Score" type="TextureRect" parent="Scores"]
 margin_left = 1312.0
@@ -462,63 +374,15 @@ margin_right = 1432.0
 margin_bottom = 880.0
 texture = SubResource( 4 )
 expand = true
-script = ExtResource( 20 )
-
-[node name="Fade" type="CanvasModulate" parent="."]
-editor/display_folded = true
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Fade"]
-anims/fade_from_black = SubResource( 5 )
-anims/fade_to_black = SubResource( 6 )
-
-[node name="Results" type="CanvasLayer" parent="."]
-editor/display_folded = true
 script = ExtResource( 21 )
-
-[node name="CenterContainer" type="CenterContainer" parent="Results"]
-editor/display_folded = true
-modulate = Color( 1, 1, 1, 0 )
-anchor_right = 1.0
-anchor_bottom = 1.0
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="WinTexture" type="TextureRect" parent="Results/CenterContainer"]
-visible = false
-margin_left = 268.0
-margin_top = 348.0
-margin_right = 1268.0
-margin_bottom = 548.0
-texture = SubResource( 8 )
-
-[node name="LoseTexture" type="TextureRect" parent="Results/CenterContainer"]
-visible = false
-margin_left = 268.0
-margin_top = 348.0
-margin_right = 1268.0
-margin_bottom = 548.0
-texture = SubResource( 9 )
-
-[node name="DrawTexture" type="TextureRect" parent="Results/CenterContainer"]
-visible = false
-margin_left = 268.0
-margin_top = 348.0
-margin_right = 1268.0
-margin_bottom = 548.0
-texture = SubResource( 10 )
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Results"]
-anims/fade_in = SubResource( 11 )
-anims/fade_out = SubResource( 12 )
 
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 22 )
 autoplay = true
 
-[connection signal="match_ended" from="Field" to="GameLogic" method="_on_Field_match_ended"]
-[connection signal="turn_finished" from="Player2Cards" to="GameLogic" method="_on_Player2Cards_turn_finished"]
+[connection signal="match_ended" from="Field" to="." method="_on_Field_match_ended"]
 [connection signal="turn_finished" from="Player2Cards" to="GameLogic/SelectionPointer" method="_on_Player2Cards_turn_finished"]
+[connection signal="turn_finished" from="Player2Cards" to="GameLogic" method="_on_Player2Cards_turn_finished"]
 [connection signal="player_captured_a_card" from="GameLogic" to="Scores" method="_on_GameLogic_player_captured_a_card"]
 [connection signal="card_selected" from="GameLogic/SelectionPointer/State/SelectingCard" to="GameLogic/SelectionPointer" method="_on_SelectingCard_card_selected"]
 [connection signal="new_card_pointed" from="GameLogic/SelectionPointer/State/SelectingCard" to="Player1Cards" method="_on_SelectingCard_new_card_pointed"]

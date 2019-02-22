@@ -70,7 +70,7 @@ align = 1
 
 [node name="MenuSelectionPointer" type="Sprite" parent="UI/MarginContainer/VBoxContainer"]
 editor/display_folded = true
-position = Vector2( 148, 195 )
+position = Vector2( 148, 193 )
 scale = Vector2( 0.4, 0.4 )
 z_index = 2
 texture = SubResource( 4 )
@@ -110,7 +110,6 @@ margin_bottom = 133.0
 custom_icons/off = ExtResource( 5 )
 custom_icons/on = ExtResource( 6 )
 custom_fonts/font = SubResource( 6 )
-disabled = true
 pressed = true
 text = "Random"
 
@@ -121,7 +120,6 @@ margin_bottom = 199.0
 custom_icons/off = ExtResource( 5 )
 custom_icons/on = ExtResource( 6 )
 custom_fonts/font = SubResource( 6 )
-disabled = true
 text = "Open"
 
 [node name="SuddenDeath" type="CheckButton" parent="UI/MarginContainer/VBoxContainer/MarginContainer/Rules"]
@@ -131,7 +129,6 @@ margin_bottom = 265.0
 custom_icons/off = ExtResource( 5 )
 custom_icons/on = ExtResource( 6 )
 custom_fonts/font = SubResource( 6 )
-disabled = true
 text = "Sudden Death"
 
 [node name="Same" type="CheckButton" parent="UI/MarginContainer/VBoxContainer/MarginContainer/Rules"]
@@ -141,7 +138,6 @@ margin_bottom = 331.0
 custom_icons/off = ExtResource( 5 )
 custom_icons/on = ExtResource( 6 )
 custom_fonts/font = SubResource( 6 )
-disabled = true
 text = "Same"
 
 [node name="Same Wall" type="CheckButton" parent="UI/MarginContainer/VBoxContainer/MarginContainer/Rules"]
@@ -151,7 +147,6 @@ margin_bottom = 397.0
 custom_icons/off = ExtResource( 5 )
 custom_icons/on = ExtResource( 6 )
 custom_fonts/font = SubResource( 6 )
-disabled = true
 text = "Same Wall"
 
 [node name="Plus" type="CheckButton" parent="UI/MarginContainer/VBoxContainer/MarginContainer/Rules"]
@@ -161,7 +156,6 @@ margin_bottom = 463.0
 custom_icons/off = ExtResource( 5 )
 custom_icons/on = ExtResource( 6 )
 custom_fonts/font = SubResource( 6 )
-disabled = true
 text = "Plus"
 
 [node name="Elemental" type="CheckButton" parent="UI/MarginContainer/VBoxContainer/MarginContainer/Rules"]
@@ -171,7 +165,6 @@ margin_bottom = 529.0
 custom_icons/off = ExtResource( 5 )
 custom_icons/on = ExtResource( 6 )
 custom_fonts/font = SubResource( 6 )
-disabled = true
 text = "Elemental"
 
 [node name="TextureButton" type="TextureButton" parent="UI/MarginContainer/VBoxContainer/MarginContainer/Rules"]
