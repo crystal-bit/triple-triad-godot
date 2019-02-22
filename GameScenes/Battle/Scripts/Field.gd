@@ -42,7 +42,6 @@ func get_container_by_vector(field_position):
 	return get_node("Container" + str(container_index))
 
 func is_position_empty(position):
-	print(get_container_by_vector(position).get_child_count())
 	return get_container_by_vector(position).get_child_count() == 0
 	
 func get_card_containers():
