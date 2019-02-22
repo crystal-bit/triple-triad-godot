@@ -10,7 +10,11 @@ Dates are in the following format: [YYYY-MM-DD]
 
 - Ported to Godot v3.1
 - Added main menu
-- Addeed SceneManager script as autoload
+- Added Autoloads:
+  - SceneManager: utility functions to load nodes and scenes
+  - GlobalState: keep track of global variables (number of played matches, and other stats)
+- When a Battle ends, stats are shown: won, drawn and lost matches
+- Splitted Battle scene in multiple scenes to improve mantainability
 
 # v1.1.0 [2019-01-04]
 
