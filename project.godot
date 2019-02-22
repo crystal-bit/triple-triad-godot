@@ -23,6 +23,7 @@ run/name="TripleTriad"
 [autoload]
 
 SceneManager="*res://Globals/SceneManager/SceneManager.gd"
+GlobalState="*res://Globals/GlobalState.gd"
 
 [display]
 
