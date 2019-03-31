@@ -55,11 +55,9 @@ __meta__ = {
 }
 
 [node name="UI" type="CanvasLayer" parent="."]
-editor/display_folded = true
 layer = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="UI"]
-editor/display_folded = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 200.0
@@ -83,7 +81,6 @@ TRIPLE TRIAD"
 align = 1
 
 [node name="MenuEntries" type="VBoxContainer" parent="UI/MarginContainer/VBoxContainer"]
-editor/display_folded = true
 margin_top = 181.0
 margin_right = 1136.0
 margin_bottom = 796.0

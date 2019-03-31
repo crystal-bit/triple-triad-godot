@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Globals/Textures/toggle-offx0.25.png" type="Texture" id=1]
 [ext_resource path="res://Globals/Textures/toggle-on-x0.25.png" type="Texture" id=2]
 [ext_resource path="res://Globals/Fonts/Cinzel-Regular.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://Globals/Textures/iconfl01_15.png" type="Texture" id=4]
-[ext_resource path="res://GameObjects/MenuSelectionPointer/MenuSelectionPointer.tscn" type="PackedScene" id=5]
+[ext_resource path="res://GameScenes/Menu/SinglePlayerMenu/Start.gd" type="Script" id=5]
+[ext_resource path="res://GameObjects/MenuSelectionPointer/MenuSelectionPointer.tscn" type="PackedScene" id=6]
 
 [sub_resource type="DynamicFontData" id=1]
 font_path = "res://Globals/Fonts/Cinzel-Bold.ttf"
@@ -13,11 +14,11 @@ font_path = "res://Globals/Fonts/Cinzel-Bold.ttf"
 size = 64
 font_data = SubResource( 1 )
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=3]
 size = 40
 font_data = ExtResource( 3 )
 
-[sub_resource type="AtlasTexture" id=5]
+[sub_resource type="AtlasTexture" id=4]
 flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 256, 894, 249, 82 )
@@ -83,7 +84,7 @@ margin_right = 636.0
 margin_bottom = 133.0
 custom_icons/off = ExtResource( 1 )
 custom_icons/on = ExtResource( 2 )
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 3 )
 disabled = true
 pressed = true
 text = "Random"
@@ -94,7 +95,7 @@ margin_right = 636.0
 margin_bottom = 199.0
 custom_icons/off = ExtResource( 1 )
 custom_icons/on = ExtResource( 2 )
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 3 )
 disabled = true
 text = "Open"
 
@@ -104,7 +105,7 @@ margin_right = 636.0
 margin_bottom = 265.0
 custom_icons/off = ExtResource( 1 )
 custom_icons/on = ExtResource( 2 )
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 3 )
 disabled = true
 text = "Sudden Death"
 
@@ -114,7 +115,7 @@ margin_right = 636.0
 margin_bottom = 331.0
 custom_icons/off = ExtResource( 1 )
 custom_icons/on = ExtResource( 2 )
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 3 )
 disabled = true
 text = "Same"
 
@@ -124,7 +125,7 @@ margin_right = 636.0
 margin_bottom = 397.0
 custom_icons/off = ExtResource( 1 )
 custom_icons/on = ExtResource( 2 )
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 3 )
 disabled = true
 text = "Same Wall"
 
@@ -134,7 +135,7 @@ margin_right = 636.0
 margin_bottom = 463.0
 custom_icons/off = ExtResource( 1 )
 custom_icons/on = ExtResource( 2 )
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 3 )
 disabled = true
 text = "Plus"
 
@@ -144,7 +145,7 @@ margin_right = 636.0
 margin_bottom = 529.0
 custom_icons/off = ExtResource( 1 )
 custom_icons/on = ExtResource( 2 )
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 3 )
 disabled = true
 text = "Elemental"
 
@@ -153,9 +154,10 @@ margin_top = 533.0
 margin_right = 636.0
 margin_bottom = 633.0
 rect_min_size = Vector2( 0, 100 )
-texture_normal = SubResource( 5 )
+texture_normal = SubResource( 4 )
 expand = true
 stretch_mode = 3
+script = ExtResource( 5 )
 
-[node name="MenuSelectionPointer" parent="UI/MarginContainer/VBoxContainer/MarginContainer/Rules" instance=ExtResource( 5 )]
+[node name="MenuSelectionPointer" parent="UI/MarginContainer/VBoxContainer/MarginContainer/Rules" instance=ExtResource( 6 )]
 
