@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Globals/Textures/iconfl01_15.png" type="Texture" id=1]
+[ext_resource path="res://GameScenes/Menu/MainMenu/Scripts/MenuSelectionPointer.gd" type="Script" id=2]
+[ext_resource path="res://Globals/Audio/cursor_move.wav" type="AudioStream" id=3]
+[ext_resource path="res://Globals/Audio/sound-invalid.wav" type="AudioStream" id=4]
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 828, 0, 196, 113 )
+
+[node name="MenuSelectionPointer" type="Sprite"]
+editor/display_folded = true
+position = Vector2( -81, 177 )
+scale = Vector2( 0.4, 0.4 )
+z_index = 2
+texture = SubResource( 4 )
+script = ExtResource( 2 )
+
+[node name="Sounds" type="Node" parent="."]
+
+[node name="Confirm" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource( 3 )
+
+[node name="Denied" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource( 4 )
+

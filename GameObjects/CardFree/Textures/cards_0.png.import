@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cards_11.png-35a8e4da8ecaa02827ca4c4fc5768ced.stex"
+path="res://.import/cards_0.png-fbb0fe334a393f1300c6c2d5b9f5542e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GameObjects/Card/Textures/cards_11.png"
-dest_files=[ "res://.import/cards_11.png-35a8e4da8ecaa02827ca4c4fc5768ced.stex" ]
+source_file="res://GameObjects/CardFree/Textures/cards_0.png"
+dest_files=[ "res://.import/cards_0.png-fbb0fe334a393f1300c6c2d5b9f5542e.stex" ]
 
 [params]
 

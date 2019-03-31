@@ -8,7 +8,7 @@ enum {
 }
 
 
-signal battle_ended()
+signal battle_ended
 
 
 func _on_Field_match_ended():

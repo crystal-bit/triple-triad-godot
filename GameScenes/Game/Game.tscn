@@ -5,7 +5,7 @@
 [ext_resource path="res://GameScenes/BattleResults/Fade.gd" type="Script" id=3]
 [ext_resource path="res://GameScenes/BattleResults/Results.tscn" type="PackedScene" id=4]
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=1]
 resource_name = "fade_from_black"
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:color")
@@ -20,7 +20,7 @@ tracks/0/keys = {
 "values": [ Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=2]
 resource_name = "fade_to_black"
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:color")
@@ -61,8 +61,8 @@ autoplay = true
 script = ExtResource( 3 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Fade"]
-anims/fade_from_black = SubResource( 5 )
-anims/fade_to_black = SubResource( 6 )
+anims/fade_from_black = SubResource( 1 )
+anims/fade_to_black = SubResource( 2 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Fade"]
 layer = 2

@@ -24,8 +24,6 @@ func _ready():
 	# start state processing
 	current_state.set_process(true)
 
-func _process(delta):
-	pass	
 
 func _change_state(new_state, params):
 	current_state.set_process(false)

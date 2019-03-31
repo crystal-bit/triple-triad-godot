@@ -1,19 +1,12 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=14 format=2]
 
-[ext_resource path="res://GameScenes/Menu/MainMenu/Scripts/MenuEntries.gd" type="Script" id=1]
-[ext_resource path="res://Globals/Fonts/Cinzel-Regular.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://GameScenes/Menu/MainMenu/Scripts/SinglePlayerLabel.gd" type="Script" id=3]
-[ext_resource path="res://Globals/Textures/iconfl01_15.png" type="Texture" id=4]
-[ext_resource path="res://GameScenes/Menu/MainMenu/Scripts/MenuSelectionPointer.gd" type="Script" id=5]
-[ext_resource path="res://Globals/Audio/cursor_move.wav" type="AudioStream" id=6]
-[ext_resource path="res://Globals/Audio/sound-invalid.wav" type="AudioStream" id=7]
-[ext_resource path="res://Globals/Audio/sound-back.wav" type="AudioStream" id=8]
-[ext_resource path="res://GameScenes/Menu/MainMenu/Scripts/QuickMatch.gd" type="Script" id=9]
-[ext_resource path="res://GameScenes/Game/Game.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Globals/Fonts/ChakraPetch-Italic.ttf" type="DynamicFontData" id=11]
-[ext_resource path="res://Globals/Fonts/ChakraPetch-Bold.ttf" type="DynamicFontData" id=12]
-[ext_resource path="res://Globals/Fonts/ChakraPetch-Regular.ttf" type="DynamicFontData" id=13]
-[ext_resource path="res://Globals/Textures/logo-crystalbit.png" type="Texture" id=14]
+[ext_resource path="res://Globals/Fonts/Cinzel-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://GameScenes/Menu/MainMenu/Scripts/SinglePlayerLabel2.gd" type="Script" id=2]
+[ext_resource path="res://GameObjects/MenuSelectionPointer/MenuSelectionPointer.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Globals/Fonts/ChakraPetch-Italic.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Globals/Fonts/ChakraPetch-Bold.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Globals/Fonts/ChakraPetch-Regular.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://Globals/Textures/logo-crystalbit.png" type="Texture" id=7]
 
 [sub_resource type="DynamicFontData" id=1]
 font_path = "res://Globals/Fonts/Cinzel-Bold.ttf"
@@ -24,27 +17,22 @@ font_data = SubResource( 1 )
 
 [sub_resource type="DynamicFont" id=3]
 size = 64
-font_data = ExtResource( 2 )
+font_data = ExtResource( 1 )
 
-[sub_resource type="AtlasTexture" id=4]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 828, 0, 196, 113 )
+[sub_resource type="DynamicFont" id=4]
+size = 60
+use_filter = true
+font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=5]
 size = 60
 use_filter = true
-font_data = ExtResource( 11 )
+font_data = ExtResource( 5 )
 
 [sub_resource type="DynamicFont" id=6]
 size = 60
 use_filter = true
-font_data = ExtResource( 12 )
-
-[sub_resource type="DynamicFont" id=7]
-size = 60
-use_filter = true
-font_data = ExtResource( 13 )
+font_data = ExtResource( 6 )
 
 [node name="MainMenu" type="Control"]
 anchor_right = 1.0
@@ -56,6 +44,7 @@ __meta__ = {
 }
 
 [node name="Background" type="CanvasLayer" parent="."]
+editor/display_folded = true
 
 [node name="ColorRect" type="ColorRect" parent="Background"]
 anchor_right = 1.0
@@ -66,9 +55,11 @@ __meta__ = {
 }
 
 [node name="UI" type="CanvasLayer" parent="."]
+editor/display_folded = true
 layer = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="UI"]
+editor/display_folded = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 200.0
@@ -99,7 +90,6 @@ margin_bottom = 796.0
 size_flags_vertical = 3
 custom_constants/separation = 0
 alignment = 1
-script = ExtResource( 1 )
 
 [node name="SinglePlayerLabel" type="Label" parent="UI/MarginContainer/VBoxContainer/MenuEntries"]
 margin_top = 133.0
@@ -108,11 +98,10 @@ margin_bottom = 220.0
 size_flags_horizontal = 5
 custom_fonts/font = SubResource( 3 )
 text = "Single Player"
-script = ExtResource( 3 )
-submenu_path = NodePath("../../SinglePlayerEntries")
+script = ExtResource( 2 )
 
 [node name="MultiPlayerLabel" type="Label" parent="UI/MarginContainer/VBoxContainer/MenuEntries"]
-modulate = Color( 1, 1, 1, 0.3 )
+modulate = Color( 1, 1, 1, 0.317647 )
 margin_top = 220.0
 margin_right = 1136.0
 margin_bottom = 307.0
@@ -120,7 +109,7 @@ custom_fonts/font = SubResource( 3 )
 text = "Multiplayer"
 
 [node name="OptionsLabel" type="Label" parent="UI/MarginContainer/VBoxContainer/MenuEntries"]
-modulate = Color( 1, 1, 1, 0.3 )
+modulate = Color( 1, 1, 1, 0.317647 )
 margin_top = 307.0
 margin_right = 1136.0
 margin_bottom = 394.0
@@ -128,7 +117,7 @@ custom_fonts/font = SubResource( 3 )
 text = "Options"
 
 [node name="AboutLabel" type="Label" parent="UI/MarginContainer/VBoxContainer/MenuEntries"]
-modulate = Color( 1, 1, 1, 0.3 )
+modulate = Color( 1, 1, 1, 0.317647 )
 margin_top = 394.0
 margin_right = 1136.0
 margin_bottom = 481.0
@@ -137,59 +126,16 @@ text = "About"
 
 [node name="SecretMenu" type="Label" parent="UI/MarginContainer/VBoxContainer/MenuEntries"]
 visible = false
-modulate = Color( 1, 1, 1, 0.3 )
+modulate = Color( 1, 1, 1, 0.317647 )
 margin_top = 438.0
 margin_right = 1374.0
 margin_bottom = 525.0
 custom_fonts/font = SubResource( 3 )
 text = "OOOOOH YOU FOUND THE SECRET MENU!"
 
-[node name="MenuSelectionPointer" type="Sprite" parent="UI/MarginContainer/VBoxContainer/MenuEntries"]
-editor/display_folded = true
-position = Vector2( -81, 177 )
-scale = Vector2( 0.4, 0.4 )
-z_index = 2
-texture = SubResource( 4 )
-script = ExtResource( 5 )
-
-[node name="Sounds" type="Node" parent="UI/MarginContainer/VBoxContainer/MenuEntries/MenuSelectionPointer"]
-
-[node name="Confirm" type="AudioStreamPlayer" parent="UI/MarginContainer/VBoxContainer/MenuEntries/MenuSelectionPointer/Sounds"]
-stream = ExtResource( 6 )
-
-[node name="Denied" type="AudioStreamPlayer" parent="UI/MarginContainer/VBoxContainer/MenuEntries/MenuSelectionPointer/Sounds"]
-stream = ExtResource( 7 )
-
-[node name="Back" type="AudioStreamPlayer" parent="UI/MarginContainer/VBoxContainer/MenuEntries/MenuSelectionPointer/Sounds"]
-stream = ExtResource( 8 )
-
-[node name="SinglePlayerEntries" type="VBoxContainer" parent="UI/MarginContainer/VBoxContainer"]
-visible = false
-margin_top = 181.0
-margin_right = 1136.0
-margin_bottom = 796.0
-size_flags_vertical = 3
-alignment = 1
-
-[node name="QuickMatch" type="Label" parent="UI/MarginContainer/VBoxContainer/SinglePlayerEntries"]
-margin_top = 218.0
-margin_right = 1136.0
-margin_bottom = 305.0
-custom_fonts/font = SubResource( 3 )
-text = "Quick match"
-script = ExtResource( 9 )
-next_scene = ExtResource( 10 )
-
-[node name="CustomMatch" type="Label" parent="UI/MarginContainer/VBoxContainer/SinglePlayerEntries"]
-modulate = Color( 1, 1, 1, 0.3 )
-margin_top = 309.0
-margin_right = 1136.0
-margin_bottom = 396.0
-custom_fonts/font = SubResource( 3 )
-text = "Custom Match"
+[node name="MenuSelectionPointer" parent="UI/MarginContainer/VBoxContainer/MenuEntries" instance=ExtResource( 3 )]
 
 [node name="MoreInfo" type="Control" parent="."]
-editor/display_folded = true
 margin_left = 1543.0
 margin_top = -7.0
 margin_right = 2928.0
@@ -202,9 +148,9 @@ __meta__ = {
 margin_right = 1729.0
 margin_bottom = 2011.0
 rect_scale = Vector2( 0.8, 0.8 )
-custom_fonts/italics_font = SubResource( 5 )
-custom_fonts/bold_font = SubResource( 6 )
-custom_fonts/normal_font = SubResource( 7 )
+custom_fonts/italics_font = SubResource( 4 )
+custom_fonts/bold_font = SubResource( 5 )
+custom_fonts/normal_font = SubResource( 6 )
 bbcode_enabled = true
 bbcode_text = "Hi I'm [b]davcri[/b],
 I appreciate when people get in touch, it's a nice way to give support!
@@ -249,6 +195,5 @@ scroll_active = false
 [node name="Logo" type="Sprite" parent="MoreInfo"]
 position = Vector2( 252, -274 )
 scale = Vector2( 0.820409, 0.820409 )
-texture = ExtResource( 14 )
+texture = ExtResource( 7 )
 
-[connection signal="menu_changed" from="UI/MarginContainer/VBoxContainer/MenuEntries/SinglePlayerLabel" to="UI/MarginContainer/VBoxContainer/MenuEntries/MenuSelectionPointer" method="_on_SinglePlayerLabel_menu_changed"]

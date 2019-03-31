@@ -3,6 +3,9 @@
 importer="texture"
 type="StreamTexture"
 path="res://.import/logo-crystalbit.png-1cd19c44499f603361536cab5ad3f52c.stex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
