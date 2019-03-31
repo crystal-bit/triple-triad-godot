@@ -96,7 +96,6 @@ margin_bottom = 199.0
 custom_icons/off = ExtResource( 1 )
 custom_icons/on = ExtResource( 2 )
 custom_fonts/font = SubResource( 3 )
-disabled = true
 text = "Open"
 
 [node name="SuddenDeath" type="CheckButton" parent="UI/MarginContainer/VBoxContainer/MarginContainer/Rules"]

@@ -25,7 +25,10 @@ func _process(delta):
 		var selected_entry = entries[index]
 		
 		if selected_entry.modulate.a == 1 and not selected_entry.get("disabled"):
-			if selected_entry.has_method("callback"):
+			if selected_entry is CheckButton:
+				# toggle check button
+				selected_entry.pressed = !selected_entry.pressed
+			elif selected_entry.has_method("callback"):
 				selected_entry.callback()
 			else:
 				print("Selected entry does not have a callback", selected_entry)

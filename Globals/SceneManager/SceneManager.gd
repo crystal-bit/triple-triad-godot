@@ -10,16 +10,16 @@ func _ready():
 	current_scene = root.get_child(root.get_child_count() - 1)
 
 
-func goto_scene(path: String):
+func goto_scene(path: String, params = null):
 	# full documentation here: http://docs.godotengine.org/en/3.0/getting_started/step_by_step/singletons_autoload.html
 	# Deleting the current scene at this point might be
 	# a bad idea, because it may be inside of a callback or function of it.
 	# The worst case will be a crash or unexpected behavior.
 	# The way around this is deferring the load to a later time
-	call_deferred("_deferred_goto_scene", path)
+	call_deferred("_deferred_goto_scene", path, params)
 	
 
-func _deferred_goto_scene(path: String):
+func _deferred_goto_scene(path: String, params = null):
 	# Immediately free the current scene,
 	# there is no risk here.
 	current_scene.free()
@@ -31,6 +31,8 @@ func _deferred_goto_scene(path: String):
 	get_tree().get_root().add_child(current_scene)
 	# Optional, to make it compatible with the SceneTree.change_scene() API.
 	get_tree().set_current_scene(current_scene)
+	if params:
+		current_scene.init(params)
 
 
 func add_node_to_scene(node):

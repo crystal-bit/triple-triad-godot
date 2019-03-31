@@ -11,6 +11,21 @@ enum {
 signal battle_ended
 
 
+var rules setget set_rules  # Game node updates this variable
+
+
+func set_rules(value):
+	rules = value
+	print(rules)
+	
+	if rules.get("Open") == false:
+		# Update AI cards texture to show the back side of the card
+		for card_container in $Player2Cards.get_children():
+			if card_container is Control:
+				var card = card_container.get_child(0)
+				print(card.covered)
+				card.covered = true
+
 func _on_Field_match_ended():
 	var match_result = _get_match_result()
 	# update global values

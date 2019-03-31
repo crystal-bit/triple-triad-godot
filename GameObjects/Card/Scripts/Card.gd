@@ -1,7 +1,7 @@
 extends TextureButton
 
 export var card_id = 5
-export var covered = false
+export var covered = false setget set_covered
 export var owned_by_player = true
 
 const CARDS_DATA_PATH = "res://GameObjects/Card/Data/triple-triad-cards-data.json"
