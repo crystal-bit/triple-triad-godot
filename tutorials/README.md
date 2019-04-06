@@ -36,6 +36,12 @@ tutorials on the Crystal Bit YouTube channel.
 - Font Cinzel: https://fonts.google.com/specimen/Cinzel
 - Hand sprite: FF VIII assets (*not free to use*)
 
-## Creare menu pt.3: SceneManager, cambio scene con autoload (TODO)
+## Creare menu pt.3:  Selezione opzioni e SceneManager(TODO)
 
-...
+<p align="center">
+  <img width="60%" src="https://imgur.com/PH05Ddn.png">
+</p>
+
+- **Project download**: [Triple Triad Download](https://github.com/crystal-bit/triple-triad-godot/archive/master.zip)
+- **YouTube video [ITA]**: [Creare menu pt.3:  Selezione opzioni e SceneManager](https://youtu.be/6Tjc2Ep3ikw)
+- **Godot version**: v3.1 
