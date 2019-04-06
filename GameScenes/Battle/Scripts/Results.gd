@@ -5,10 +5,11 @@ onready var win_texture: Node = $CenterContainer/VBoxContainer/WinTexture
 onready var lose_texture: Node = $CenterContainer/VBoxContainer/LoseTexture
 onready var draw_texture: Node = $CenterContainer/VBoxContainer/DrawTexture
 onready var matches_stats_node: Node = $CenterContainer/VBoxContainer/MarginContainer/VBoxContainer
+onready var menu_pointer: Node = $CenterContainer/VBoxContainer/VBoxContainer/MenuSelectionPointer
 
 var result: String = "win" setget set_result, get_result
 
-	
+
 func _ready():
 	_update_visible_texture()
 	_set_stats()
@@ -32,6 +33,12 @@ func show_draw():
 	
 func show_lose():
 	_show_texture("lose")
+	
+func process_input(process: bool):
+	if process:
+		menu_pointer.set_process(true)
+	else:
+		menu_pointer.set_process(false)
 
 func _show_texture(texture_string: String):
 	set_result(texture_string)

@@ -210,6 +210,7 @@ size_flags_vertical = 3
 [node name="Tween" type="Tween" parent="Player1Cards"]
 
 [node name="Player2Cards" type="VBoxContainer" parent="."]
+editor/display_folded = true
 margin_left = 1246.0
 margin_top = 64.0
 margin_right = 1484.0
@@ -326,6 +327,7 @@ rect_scale = Vector2( 0.5, 0.5 )
 texture = SubResource( 1 )
 
 [node name="Scores" type="Control" parent="."]
+editor/display_folded = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 18 )
@@ -353,13 +355,13 @@ stream = ExtResource( 21 )
 autoplay = true
 
 [connection signal="match_ended" from="Field" to="." method="_on_Field_match_ended"]
-[connection signal="turn_finished" from="Player2Cards" to="GameLogic/SelectionPointer" method="_on_Player2Cards_turn_finished"]
 [connection signal="turn_finished" from="Player2Cards" to="GameLogic" method="_on_Player2Cards_turn_finished"]
+[connection signal="turn_finished" from="Player2Cards" to="GameLogic/SelectionPointer" method="_on_Player2Cards_turn_finished"]
 [connection signal="player_captured_a_card" from="GameLogic" to="Scores" method="_on_GameLogic_player_captured_a_card"]
 [connection signal="card_selected" from="GameLogic/SelectionPointer/State/SelectingCard" to="GameLogic/SelectionPointer" method="_on_SelectingCard_card_selected"]
 [connection signal="new_card_pointed" from="GameLogic/SelectionPointer/State/SelectingCard" to="Player1Cards" method="_on_SelectingCard_new_card_pointed"]
 [connection signal="change_to_idle_state" from="GameLogic/SelectionPointer/State/CardSelected" to="GameLogic/SelectionPointer" method="_on_CardSelected_change_to_idle_state"]
+[connection signal="place_card" from="GameLogic/SelectionPointer/State/CardSelected" to="Player1Cards" method="_on_CardSelected_place_card"]
 [connection signal="place_card" from="GameLogic/SelectionPointer/State/CardSelected" to="Player2Cards" method="_on_CardSelected_place_card"]
 [connection signal="place_card" from="GameLogic/SelectionPointer/State/CardSelected" to="GameLogic" method="_on_CardSelected_place_card"]
-[connection signal="place_card" from="GameLogic/SelectionPointer/State/CardSelected" to="Player1Cards" method="_on_CardSelected_place_card"]
 [connection signal="return_to_card_selection" from="GameLogic/SelectionPointer/State/CardSelected" to="GameLogic/SelectionPointer" method="_on_CardSelected_return_to_card_selection"]

@@ -1,25 +1,28 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://GameScenes/Battle/Scripts/Results.gd" type="Script" id=1]
 [ext_resource path="res://Globals/Fonts/Cinzel-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://GameScenes/BattleResults/PlayAgain.gd" type="Script" id=3]
+[ext_resource path="res://GameScenes/BattleResults/Exit.gd" type="Script" id=4]
+[ext_resource path="res://GameObjects/MenuSelectionPointer/MenuSelectionPointer.tscn" type="PackedScene" id=5]
 
-[sub_resource type="StreamTexture" id=1]
+[sub_resource type="StreamTexture" id=6]
 flags = 4
 load_path = "res://.import/cardstext_14.png-bf399ca8e73133f91cbb4d7246dd44f0.stex"
 
-[sub_resource type="AtlasTexture" id=2]
+[sub_resource type="AtlasTexture" id=7]
 flags = 4
-atlas = SubResource( 1 )
+atlas = SubResource( 6 )
 region = Rect2( 0, 0, 1000, 200 )
 
-[sub_resource type="AtlasTexture" id=3]
+[sub_resource type="AtlasTexture" id=8]
 flags = 4
-atlas = SubResource( 1 )
+atlas = SubResource( 6 )
 region = Rect2( 0, 200, 1000, 200 )
 
-[sub_resource type="AtlasTexture" id=4]
+[sub_resource type="AtlasTexture" id=9]
 flags = 4
-atlas = SubResource( 1 )
+atlas = SubResource( 6 )
 region = Rect2( 0, 400, 1000, 200 )
 
 [sub_resource type="DynamicFont" id=5]
@@ -40,30 +43,31 @@ __meta__ = {
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
 margin_left = 268.0
-margin_top = 196.0
+margin_top = 150.0
 margin_right = 1268.0
-margin_bottom = 700.0
+margin_bottom = 746.0
 
 [node name="WinTexture" type="TextureRect" parent="CenterContainer/VBoxContainer"]
 margin_right = 1000.0
 margin_bottom = 200.0
-texture = SubResource( 2 )
+texture = SubResource( 7 )
 
 [node name="LoseTexture" type="TextureRect" parent="CenterContainer/VBoxContainer"]
 visible = false
 margin_top = 204.0
 margin_right = 1000.0
 margin_bottom = 404.0
-texture = SubResource( 3 )
+texture = SubResource( 8 )
 
 [node name="DrawTexture" type="TextureRect" parent="CenterContainer/VBoxContainer"]
 visible = false
 margin_top = 204.0
 margin_right = 1000.0
 margin_bottom = 404.0
-texture = SubResource( 4 )
+texture = SubResource( 9 )
 
 [node name="MarginContainer" type="MarginContainer" parent="CenterContainer/VBoxContainer"]
+editor/display_folded = true
 margin_top = 204.0
 margin_right = 1000.0
 margin_bottom = 504.0
@@ -162,4 +166,31 @@ margin_bottom = 42.0
 size_flags_horizontal = 3
 custom_fonts/font = SubResource( 5 )
 valign = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/VBoxContainer"]
+margin_top = 508.0
+margin_right = 1000.0
+margin_bottom = 596.0
+
+[node name="PlayAgain" type="Label" parent="CenterContainer/VBoxContainer/VBoxContainer"]
+margin_right = 1000.0
+margin_bottom = 42.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 5 )
+text = "Play again"
+align = 1
+script = ExtResource( 3 )
+
+[node name="Exit" type="Label" parent="CenterContainer/VBoxContainer/VBoxContainer"]
+margin_top = 46.0
+margin_right = 1000.0
+margin_bottom = 88.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 5 )
+text = "Exit"
+align = 1
+script = ExtResource( 4 )
+
+[node name="MenuSelectionPointer" parent="CenterContainer/VBoxContainer/VBoxContainer" instance=ExtResource( 5 )]
+position = Vector2( 91.6775, 28.0656 )
 
