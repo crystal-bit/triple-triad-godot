@@ -15,6 +15,7 @@ Dates are in the following format: [YYYY-MM-DD]
   - GlobalState: keep track of global variables (number of played matches, and other stats)
 - When a Battle ends, stats are shown: won, drawn and lost matches
 - Splitted Battle scene in multiple scenes to improve mantainability
+- Add free cards textures by Hairic
 
 # v1.1.0 [2019-01-04]
 
