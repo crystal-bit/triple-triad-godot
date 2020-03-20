@@ -1,4 +1,4 @@
-# Triple Triad re-made with Godot 3.1
+# Triple Triad re-made with Godot
 
 ![Triple Triad in Godot screenshot](https://imgur.com/RwKigsz.jpg)
 
@@ -6,11 +6,6 @@
 
 This repository is the answer to my question: the core of the game has been developed during [my Devember 2018 challenge](https://davcri.github.io/posts/devember2018-retrospective/) (a challenge where
 you have to code each day of December for at least 1 hour).
-
-## Tutorials
-
-If you speak Italian, you can find a list of video tutorials
-about this project in the [tutorials/README.md file](./tutorials/README.md).
 
 ---
 
@@ -31,7 +26,7 @@ You can download a prebuilt executable for Windows/OSX/Linux from the [release p
 
 ### From source (using Godot)
 
-1. [Download Godot Engine](https://godotengine.org/download/) 
+1. [Download Godot Engine 3.2.1](https://godotengine.org/download/) 
 2. Download this project
 3. Launch Godot Engine
 4. Import the project into Godot
