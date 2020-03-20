@@ -44,7 +44,6 @@ __meta__ = {
 }
 
 [node name="Background" type="CanvasLayer" parent="."]
-editor/display_folded = true
 
 [node name="ColorRect" type="ColorRect" parent="Background"]
 anchor_right = 1.0
@@ -55,11 +54,9 @@ __meta__ = {
 }
 
 [node name="UI" type="CanvasLayer" parent="."]
-editor/display_folded = true
 layer = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="UI"]
-editor/display_folded = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 200.0
@@ -68,7 +65,6 @@ margin_right = -200.0
 margin_bottom = -60.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="UI/MarginContainer"]
-editor/display_folded = true
 margin_right = 1136.0
 margin_bottom = 796.0
 size_flags_horizontal = 3
@@ -196,4 +192,3 @@ scroll_active = false
 position = Vector2( 252, -274 )
 scale = Vector2( 0.820409, 0.820409 )
 texture = ExtResource( 7 )
-

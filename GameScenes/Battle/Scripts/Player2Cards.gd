@@ -15,7 +15,7 @@ func _ready():
 	# update the seed
 	randomize()
 	# randomize AI cards
-	randomize_cards()	
+	randomize_cards()
 	set_process(false)
 
 func enable():
@@ -40,34 +40,34 @@ func _process(delta):
 		get_parent().get_node("GameLogic/SelectionPointer/Audio/CardMove").play()
 		# finish turn
 		emit_signal("turn_finished", rand_position)
-	
+
 func get_card_container_at(index):
 	""" Get a Card node given an integer index
 	"""
-	assert index <= get_card_count() - 1
+	assert(index <= get_card_count() - 1)
 	var card_container = get_child(index)
 	return card_container
 
 func get_card_count():
 	return get_child_count() - 1  # 1 node is the Tween node
-	
+
 func set_current_selected_card(index):
-	assert index <= get_card_count() - 1
+	assert(index <= get_card_count() - 1)
 	var selected_card = null
 	# if there is a selected card
 	if selected_card_index != null:
 		selected_card = get_child(selected_card_index).get_child(0)
 		move_right(selected_card, 50)
-	
+
 	var new_selected_card =  get_child(index).get_child(0)
 	move_left(new_selected_card, 50)
 	selected_card_index = index
-	
+
 func move_right(card_container, offset):
 	$Tween.interpolate_property(
-		card_container, 
-		"rect_position", 
-		Vector2(0, 0), 
+		card_container,
+		"rect_position",
+		Vector2(0, 0),
 		Vector2(0, 0),
 		0.1,  # time
 		Tween.TRANS_EXPO,
@@ -77,9 +77,9 @@ func move_right(card_container, offset):
 
 func move_left(card_container, offset):
 	$Tween.interpolate_property(
-		card_container, 
-		"rect_position", 
-		Vector2(0, 0), 
+		card_container,
+		"rect_position",
+		Vector2(0, 0),
 		Vector2(-offset, 0),
 		0.1,  # time
 		Tween.TRANS_EXPO,

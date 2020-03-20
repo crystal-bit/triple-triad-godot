@@ -15,17 +15,17 @@ func _ready():
 
 func _capture_cards(card_positioned_at: Vector2, turn_data: Dictionary):
 	# TODO change these magic costants to global constants
-	assert card_positioned_at.x >= 0
-	assert card_positioned_at.y >= 0
-	assert card_positioned_at.x <= 2
-	assert card_positioned_at.y <= 2  
+	assert(card_positioned_at.x >= 0)
+	assert(card_positioned_at.y >= 0)
+	assert(card_positioned_at.x <= 2)
+	assert(card_positioned_at.y <= 2)
 	var directions_to_check = {
 		"left": card_positioned_at + Vector2(-1, 0),
-		"right": card_positioned_at + Vector2(1, 0), 
+		"right": card_positioned_at + Vector2(1, 0),
 		"top": card_positioned_at + Vector2(0, -1),
 		"bottom": card_positioned_at + Vector2(0, 1)
 	}
-	# remove out of field positions 
+	# remove out of field positions
 	if card_positioned_at.x == 0:
 		directions_to_check.erase("left")
 	if card_positioned_at.x == 2:
@@ -57,7 +57,7 @@ func _capture_cards(card_positioned_at: Vector2, turn_data: Dictionary):
 						continue
 					card_on_side.capture()
 					emit_signal("player_captured_a_card", turn_data["player_in_turn"])
-	
+
 
 func _attacking_card_wins(attacking_card, defending_card, side):
 	""" Checks if the first card captures the defending card on a given side.

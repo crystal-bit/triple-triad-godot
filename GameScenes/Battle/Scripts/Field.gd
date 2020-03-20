@@ -10,7 +10,7 @@ func add_card_at_position(card_container, field_position):
 	var card = card_container.get_child(0)
 	card_container.remove_child(card)
 	# free memory
-	card_container.queue_free()	
+	card_container.queue_free()
 	# reset card offset
 	card.rect_position = Vector2()
 	get_container_by_vector(field_position).add_child(card)
@@ -20,7 +20,7 @@ func add_card_at_position(card_container, field_position):
 		emit_signal("match_ended")
 
 func get_random_empty_container():  # TODO: change name! get_vector_...
-	assert cards_played < 9
+	assert(cards_played < 9)
 	# get random vector position
 	var container_position = Vector2(randi() % 3, randi() % 3)
 	# get container at position
@@ -37,13 +37,13 @@ func get_container_by_vector(field_position):
 	Vector2(0, 0) is the top-left corner
 	Vector2(2, 2) is the bottom-right corner
 	"""
-	# calculate container_index by field_position vector 
+	# calculate container_index by field_position vector
 	var container_index = (int(field_position.x + 1) % 4) + field_position.y * 3
 	return get_node("Container" + str(container_index))
 
 func is_position_empty(position):
 	return get_container_by_vector(position).get_child_count() == 0
-	
+
 func get_card_containers():
 	return get_children()
 
@@ -54,4 +54,3 @@ func get_card_containers_matrix():
 		[$Container7, $Container8, $Container9]
 	]
 	return matrix
-	
