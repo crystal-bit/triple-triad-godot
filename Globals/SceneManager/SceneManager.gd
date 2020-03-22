@@ -3,7 +3,7 @@ extends Node
 var current_scene: Node = null
 
 
-func _ready(): 
+func _ready():
 	# get the root node
 	var root = get_tree().get_root()
 	# save the current scene
@@ -17,7 +17,7 @@ func goto_scene(path: String, params = null):
 	# The worst case will be a crash or unexpected behavior.
 	# The way around this is deferring the load to a later time
 	call_deferred("_deferred_goto_scene", path, params)
-	
+
 
 func _deferred_goto_scene(path: String, params = null):
 	# Immediately free the current scene,
@@ -44,7 +44,7 @@ func load_node(node_scene_path):
 	var new_node_scene = load(node_scene_path)
 	var new_node = new_node_scene.instance()
 	return new_node
-	
+
 
 func reparent_node_to(node: Node, new_parent: Node):
 	""" Reparent a node.
@@ -55,7 +55,6 @@ func reparent_node_to(node: Node, new_parent: Node):
 	old_parent.remove_child(node)
 	# TODO: free memory?
 	new_parent.add_child(node)
-	
-	
-	
-	
+
+
+

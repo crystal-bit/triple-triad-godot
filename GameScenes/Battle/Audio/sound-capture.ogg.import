@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/sound-capture.ogg-b7304e272b7776352324990b00b93bf7.oggstr"
+
+[deps]
+
+source_file="res://GameScenes/Battle/Audio/sound-capture.ogg"
+dest_files=[ "res://.import/sound-capture.ogg-b7304e272b7776352324990b00b93bf7.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

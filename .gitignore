@@ -8,4 +8,5 @@ export_presets.cfg
 .mono/
 
 # folder that I use for builds
+builds
 Builds

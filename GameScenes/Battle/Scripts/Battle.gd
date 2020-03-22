@@ -17,7 +17,7 @@ var rules setget set_rules  # Game node updates this variable
 func set_rules(value):
 	rules = value
 	print(rules)
-	
+
 	if rules.get("Open") == false:
 		# Update AI cards texture to show the back side of the card
 		for card_container in $Player2Cards.get_children():

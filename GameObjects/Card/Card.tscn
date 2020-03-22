@@ -3,10 +3,7 @@
 [ext_resource path="res://GameObjects/Card/Textures/cards_0.png" type="Texture" id=1]
 [ext_resource path="res://GameObjects/Card/Scripts/Card.gd" type="Script" id=2]
 [ext_resource path="res://Globals/Textures/cardstext_13-edit.png" type="Texture" id=3]
-[ext_resource path="res://GameScenes/Battle/Audio/sound-capture.wav" type="AudioStream" id=4]
-
-
-
+[ext_resource path="res://GameScenes/Battle/Audio/sound-capture.ogg" type="AudioStream" id=4]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
@@ -88,6 +85,9 @@ size_flags_vertical = 3
 texture_normal = SubResource( 1 )
 expand = true
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="PlayerGradient" type="TextureRect" parent="."]
 show_behind_parent = true
@@ -121,7 +121,6 @@ texture = SubResource( 5 )
 expand = true
 
 [node name="Attributes" type="GridContainer" parent="."]
-editor/display_folded = true
 margin_left = 18.0
 margin_top = 18.0
 margin_right = 96.0
@@ -216,4 +215,3 @@ margin_bottom = 14.0
 
 [node name="AudioCapture" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
-

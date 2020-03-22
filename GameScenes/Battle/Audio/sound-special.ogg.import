@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/sound-special.ogg-afab05f73e5dd92aed33c1bb8d74b2a8.oggstr"
+
+[deps]
+
+source_file="res://GameScenes/Battle/Audio/sound-special.ogg"
+dest_files=[ "res://.import/sound-special.ogg-afab05f73e5dd92aed33c1bb8d74b2a8.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Shuffle or Boogie.ogg-44b944881b221b55ca6dbe5fc1f8d358.oggstr"
+
+[deps]
+
+source_file="res://GameScenes/Battle/Audio/Shuffle or Boogie.ogg"
+dest_files=[ "res://.import/Shuffle or Boogie.ogg-44b944881b221b55ca6dbe5fc1f8d358.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

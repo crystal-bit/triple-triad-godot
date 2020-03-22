@@ -6,6 +6,7 @@ path="res://.import/cards_1.png-3a29df96747ca31bf238124f6e97f98c.stex"
 metadata={
 "vram_texture": false
 }
+group_file="res://GameObjects/Card/Textures/atlas.png"
 
 [deps]
 
@@ -32,3 +33,4 @@ stream=false
 size_limit=0
 detect_3d=true
 svg/scale=1.0
+atlas_file="res://GameObjects/Card/Textures/atlas.png"

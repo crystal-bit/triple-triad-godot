@@ -20,10 +20,10 @@ func _process(delta):
 		move_down()
 	elif Input.is_action_just_pressed("ui_up"):
 		move_up()
-	
+
 	if Input.is_action_just_pressed("ui_accept"):
 		var selected_entry = entries[index]
-		
+
 		if selected_entry.modulate.a == 1 and not selected_entry.get("disabled"):
 			if selected_entry is CheckButton:
 				# toggle check button
@@ -42,7 +42,7 @@ func set_selectetd_entry(new_index):
 		index = new_index
 		var selected_entry = entries[index]
 		# update sprite position
-		position = Vector2( 
+		position = Vector2(
 			selected_entry.rect_position.x - (get_rect().size.x/2)*scale.x - 20,
 			selected_entry.rect_position.y + selected_entry.rect_size.y/2
 		)
@@ -52,7 +52,7 @@ func set_selectetd_entry(new_index):
 		return false  # Cursor was not moved
 
 
-func move_down():	
+func move_down():
 	# if cursor moved
 	if set_selectetd_entry(index + 1):
 		$Sounds/Confirm.play()

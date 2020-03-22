@@ -5,7 +5,7 @@
 [ext_resource path="res://GameScenes/Battle/Textures/cardsmat/cardsmat_1.png" type="Texture" id=3]
 [ext_resource path="res://GameScenes/Battle/Scripts/Field.gd" type="Script" id=4]
 [ext_resource path="res://GameScenes/Battle/Scripts/Player1Cards.gd" type="Script" id=5]
-[ext_resource path="res://GameObjects/CardFree/Card.tscn" type="PackedScene" id=6]
+[ext_resource path="res://GameObjects/Card/Card.tscn" type="PackedScene" id=6]
 [ext_resource path="res://GameScenes/Battle/Scripts/Player2Cards.gd" type="Script" id=7]
 [ext_resource path="res://GameScenes/Battle/Scripts/GameLogic/GameLogic.gd" type="Script" id=8]
 [ext_resource path="res://Globals/Textures/iconfl01_15.png" type="Texture" id=9]
@@ -13,14 +13,14 @@
 [ext_resource path="res://GameScenes/Battle/Scripts/GameLogic/SelectionPointer/States/SelectingCard.gd" type="Script" id=11]
 [ext_resource path="res://GameScenes/Battle/Scripts/GameLogic/SelectionPointer/States/CardSelected.gd" type="Script" id=12]
 [ext_resource path="res://GameScenes/Battle/Scripts/GameLogic/SelectionPointer/States/Idle.gd" type="Script" id=13]
-[ext_resource path="res://Globals/Audio/cursor_move.wav" type="AudioStream" id=14]
-[ext_resource path="res://GameScenes/Battle/Audio/sound-card.wav" type="AudioStream" id=15]
-[ext_resource path="res://Globals/Audio/sound-back.wav" type="AudioStream" id=16]
-[ext_resource path="res://Globals/Audio/sound-invalid.wav" type="AudioStream" id=17]
+[ext_resource path="res://Globals/Audio/cursor_move.ogg" type="AudioStream" id=14]
+[ext_resource path="res://GameScenes/Battle/Audio/sound-card.ogg" type="AudioStream" id=15]
+[ext_resource path="res://Globals/Audio/sound-back.ogg" type="AudioStream" id=16]
+[ext_resource path="res://Globals/Audio/sound-invalid.ogg" type="AudioStream" id=17]
 [ext_resource path="res://GameScenes/Battle/Scripts/Scores.gd" type="Script" id=18]
 [ext_resource path="res://Globals/Textures/cardstext_13-edit.png" type="Texture" id=19]
 [ext_resource path="res://GameScenes/Battle/Scripts/ScoreTexture.gd" type="Script" id=20]
-[ext_resource path="res://GameScenes/Battle/Audio/Shuffle or Boogie.wav" type="AudioStream" id=21]
+[ext_resource path="res://GameScenes/Battle/Audio/Shuffle or Boogie.ogg" type="AudioStream" id=21]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
@@ -47,7 +47,6 @@ __meta__ = {
 }
 
 [node name="BackroundTextures" type="Control" parent="."]
-editor/display_folded = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {
@@ -66,7 +65,6 @@ margin_bottom = 1024.0
 texture = ExtResource( 3 )
 
 [node name="Field" type="GridContainer" parent="."]
-editor/display_folded = true
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -84,34 +82,34 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Container1" type="Container" parent="Field"]
+[node name="Container1" type="Control" parent="Field"]
 margin_right = 245.0
 margin_bottom = 242.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Container2" type="Container" parent="Field"]
+[node name="Container2" type="Control" parent="Field"]
 margin_left = 261.0
 margin_right = 506.0
 margin_bottom = 242.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Container3" type="Container" parent="Field"]
+[node name="Container3" type="Control" parent="Field"]
 margin_left = 522.0
 margin_right = 767.0
 margin_bottom = 242.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Container4" type="Container" parent="Field"]
+[node name="Container4" type="Control" parent="Field"]
 margin_top = 258.0
 margin_right = 245.0
 margin_bottom = 500.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Container5" type="Container" parent="Field"]
+[node name="Container5" type="Control" parent="Field"]
 margin_left = 261.0
 margin_top = 258.0
 margin_right = 506.0
@@ -119,7 +117,7 @@ margin_bottom = 500.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Container6" type="Container" parent="Field"]
+[node name="Container6" type="Control" parent="Field"]
 margin_left = 522.0
 margin_top = 258.0
 margin_right = 767.0
@@ -127,14 +125,14 @@ margin_bottom = 500.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Container7" type="Container" parent="Field"]
+[node name="Container7" type="Control" parent="Field"]
 margin_top = 516.0
 margin_right = 245.0
 margin_bottom = 758.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Container8" type="Container" parent="Field"]
+[node name="Container8" type="Control" parent="Field"]
 margin_left = 261.0
 margin_top = 516.0
 margin_right = 506.0
@@ -142,7 +140,7 @@ margin_bottom = 758.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Container9" type="Container" parent="Field"]
+[node name="Container9" type="Control" parent="Field"]
 margin_left = 522.0
 margin_top = 516.0
 margin_right = 767.0
@@ -151,7 +149,6 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Player1Cards" type="VBoxContainer" parent="."]
-editor/display_folded = true
 anchor_bottom = 1.0
 margin_left = 50.0
 margin_top = 64.0
@@ -210,7 +207,6 @@ size_flags_vertical = 3
 [node name="Tween" type="Tween" parent="Player1Cards"]
 
 [node name="Player2Cards" type="VBoxContainer" parent="."]
-editor/display_folded = true
 margin_left = 1246.0
 margin_top = 64.0
 margin_right = 1484.0
@@ -274,7 +270,6 @@ owned_by_player = false
 [node name="Tween" type="Tween" parent="Player2Cards"]
 
 [node name="GameLogic" type="Node" parent="."]
-editor/display_folded = true
 script = ExtResource( 8 )
 field_path = NodePath("../Field")
 
@@ -303,7 +298,6 @@ field_path = NodePath("../../../../Field")
 script = ExtResource( 13 )
 
 [node name="Audio" type="Node" parent="GameLogic/SelectionPointer"]
-editor/display_folded = true
 
 [node name="CursorMove" type="AudioStreamPlayer" parent="GameLogic/SelectionPointer/Audio"]
 stream = ExtResource( 14 )
@@ -327,7 +321,6 @@ rect_scale = Vector2( 0.5, 0.5 )
 texture = SubResource( 1 )
 
 [node name="Scores" type="Control" parent="."]
-editor/display_folded = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 18 )
@@ -353,7 +346,6 @@ script = ExtResource( 20 )
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 21 )
 autoplay = true
-
 [connection signal="match_ended" from="Field" to="." method="_on_Field_match_ended"]
 [connection signal="turn_finished" from="Player2Cards" to="GameLogic" method="_on_Player2Cards_turn_finished"]
 [connection signal="turn_finished" from="Player2Cards" to="GameLogic/SelectionPointer" method="_on_Player2Cards_turn_finished"]
@@ -361,7 +353,7 @@ autoplay = true
 [connection signal="card_selected" from="GameLogic/SelectionPointer/State/SelectingCard" to="GameLogic/SelectionPointer" method="_on_SelectingCard_card_selected"]
 [connection signal="new_card_pointed" from="GameLogic/SelectionPointer/State/SelectingCard" to="Player1Cards" method="_on_SelectingCard_new_card_pointed"]
 [connection signal="change_to_idle_state" from="GameLogic/SelectionPointer/State/CardSelected" to="GameLogic/SelectionPointer" method="_on_CardSelected_change_to_idle_state"]
+[connection signal="place_card" from="GameLogic/SelectionPointer/State/CardSelected" to="GameLogic" method="_on_CardSelected_place_card"]
 [connection signal="place_card" from="GameLogic/SelectionPointer/State/CardSelected" to="Player1Cards" method="_on_CardSelected_place_card"]
 [connection signal="place_card" from="GameLogic/SelectionPointer/State/CardSelected" to="Player2Cards" method="_on_CardSelected_place_card"]
-[connection signal="place_card" from="GameLogic/SelectionPointer/State/CardSelected" to="GameLogic" method="_on_CardSelected_place_card"]
 [connection signal="return_to_card_selection" from="GameLogic/SelectionPointer/State/CardSelected" to="GameLogic/SelectionPointer" method="_on_CardSelected_return_to_card_selection"]

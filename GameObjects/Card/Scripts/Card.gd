@@ -59,9 +59,9 @@ func _get_atlas_texture_by_group_and_index(c_group, c_index):
 	t.atlas = load(CARDS_PATH + "cards_{grp}.png".format({"grp": int(c_group)}))
 	# set the region
 	t.region = Rect2(
-		(int(c_index) % CARDS_PER_ROW)*CARD_WIDTH, 
-		(int(c_index) / CARDS_PER_ROW)*CARD_HEIGHT, 
-		CARD_WIDTH, 
+		(int(c_index) % CARDS_PER_ROW)*CARD_WIDTH,
+		(int(c_index) / CARDS_PER_ROW)*CARD_HEIGHT,
+		CARD_WIDTH,
 		CARD_HEIGHT
 	)
 	return t
@@ -84,7 +84,7 @@ func _load_cards_data_from_json():
 		# JSON is valid
 		return parse_json(file_data)
 	else:
-	    prints("Invalid JSON\n", error_str)
+		prints("Invalid JSON\n", error_str)
 
 func set_covered(is_covered):
 	covered = is_covered

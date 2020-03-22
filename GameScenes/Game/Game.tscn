@@ -1,13 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://GameScenes/Game/Game.gd" type="Script" id=1]
 [ext_resource path="res://GameScenes/Battle/Battle.tscn" type="PackedScene" id=2]
-[ext_resource path="res://GameScenes/Battle/Audio/Shuffle or Boogie.wav" type="AudioStream" id=3]
 [ext_resource path="res://GameScenes/BattleResults/Fade.gd" type="Script" id=4]
 [ext_resource path="res://GameScenes/BattleResults/Results.tscn" type="PackedScene" id=5]
 
 [sub_resource type="Animation" id=1]
-resource_name = "fade_from_black"
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:color")
 tracks/0/interp = 1
@@ -22,7 +20,6 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id=2]
-resource_name = "fade_to_black"
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:color")
 tracks/0/interp = 1
@@ -52,12 +49,11 @@ tracks/1/keys = {
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Battle" parent="." instance=ExtResource( 2 )]
-
-[node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 3 )
-autoplay = true
 
 [node name="Fade" type="CanvasModulate" parent="."]
 script = ExtResource( 4 )
@@ -71,5 +67,4 @@ layer = 2
 
 [node name="Results" parent="Fade/CanvasLayer" instance=ExtResource( 5 )]
 modulate = Color( 1, 1, 1, 0 )
-
 [connection signal="battle_ended" from="Battle" to="Fade" method="_on_Battle_battle_ended"]
