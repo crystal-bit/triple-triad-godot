@@ -1,8 +1,7 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://GameScenes/Battle/Scripts/Battle.gd" type="Script" id=1]
-[ext_resource path="res://GameScenes/Battle/Textures/cardsmat/cardsmat_13.png" type="Texture" id=2]
-[ext_resource path="res://GameScenes/Battle/Textures/cardsmat/cardsmat_1.png" type="Texture" id=3]
+[ext_resource path="res://GameScenes/Battle/Textures/field.png" type="Texture" id=2]
 [ext_resource path="res://GameScenes/Battle/Scripts/Field.gd" type="Script" id=4]
 [ext_resource path="res://GameScenes/Battle/Scripts/Player1Cards.gd" type="Script" id=5]
 [ext_resource path="res://GameObjects/Card/Card.tscn" type="PackedScene" id=6]
@@ -54,15 +53,12 @@ __meta__ = {
 }
 
 [node name="CardsmatLeft" type="TextureRect" parent="BackroundTextures"]
-margin_right = 1024.0
-margin_bottom = 1024.0
-texture = ExtResource( 2 )
-
-[node name="CardsmatRight" type="TextureRect" parent="BackroundTextures"]
-margin_left = 1024.0
 margin_right = 1536.0
-margin_bottom = 1024.0
-texture = ExtResource( 3 )
+margin_bottom = 896.0
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Field" type="GridContainer" parent="."]
 anchor_left = 0.5
@@ -354,6 +350,6 @@ autoplay = true
 [connection signal="new_card_pointed" from="GameLogic/SelectionPointer/State/SelectingCard" to="Player1Cards" method="_on_SelectingCard_new_card_pointed"]
 [connection signal="change_to_idle_state" from="GameLogic/SelectionPointer/State/CardSelected" to="GameLogic/SelectionPointer" method="_on_CardSelected_change_to_idle_state"]
 [connection signal="place_card" from="GameLogic/SelectionPointer/State/CardSelected" to="GameLogic" method="_on_CardSelected_place_card"]
-[connection signal="place_card" from="GameLogic/SelectionPointer/State/CardSelected" to="Player1Cards" method="_on_CardSelected_place_card"]
 [connection signal="place_card" from="GameLogic/SelectionPointer/State/CardSelected" to="Player2Cards" method="_on_CardSelected_place_card"]
+[connection signal="place_card" from="GameLogic/SelectionPointer/State/CardSelected" to="Player1Cards" method="_on_CardSelected_place_card"]
 [connection signal="return_to_card_selection" from="GameLogic/SelectionPointer/State/CardSelected" to="GameLogic/SelectionPointer" method="_on_CardSelected_return_to_card_selection"]
