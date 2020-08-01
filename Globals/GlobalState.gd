@@ -7,6 +7,7 @@ var matches_stats = {
 	"drawn": 0
 } setget set_matches_stats, get_matches_stats
 
+var current_rules = {}
 
 signal matches_stats_changed
 
