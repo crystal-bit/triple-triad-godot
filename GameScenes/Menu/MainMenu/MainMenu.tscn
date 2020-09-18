@@ -1,12 +1,8 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Globals/Fonts/Cinzel-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://GameScenes/Menu/MainMenu/Scripts/SinglePlayerLabel2.gd" type="Script" id=2]
 [ext_resource path="res://GameObjects/MenuSelectionPointer/MenuSelectionPointer.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Globals/Fonts/ChakraPetch-Italic.ttf" type="DynamicFontData" id=4]
-[ext_resource path="res://Globals/Fonts/ChakraPetch-Bold.ttf" type="DynamicFontData" id=5]
-[ext_resource path="res://Globals/Fonts/ChakraPetch-Regular.ttf" type="DynamicFontData" id=6]
-[ext_resource path="res://Globals/Textures/logo-crystalbit.png" type="Texture" id=7]
 
 [sub_resource type="DynamicFontData" id=1]
 font_path = "res://Globals/Fonts/Cinzel-Bold.ttf"
@@ -18,21 +14,6 @@ font_data = SubResource( 1 )
 [sub_resource type="DynamicFont" id=3]
 size = 64
 font_data = ExtResource( 1 )
-
-[sub_resource type="DynamicFont" id=4]
-size = 60
-use_filter = true
-font_data = ExtResource( 4 )
-
-[sub_resource type="DynamicFont" id=5]
-size = 60
-use_filter = true
-font_data = ExtResource( 5 )
-
-[sub_resource type="DynamicFont" id=6]
-size = 60
-use_filter = true
-font_data = ExtResource( 6 )
 
 [node name="MainMenu" type="Control"]
 anchor_right = 1.0
@@ -63,6 +44,9 @@ margin_left = 200.0
 margin_top = 40.0
 margin_right = -200.0
 margin_bottom = -60.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="VBoxContainer" type="VBoxContainer" parent="UI/MarginContainer"]
 margin_right = 1136.0
@@ -130,65 +114,3 @@ custom_fonts/font = SubResource( 3 )
 text = "OOOOOH YOU FOUND THE SECRET MENU!"
 
 [node name="MenuSelectionPointer" parent="UI/MarginContainer/VBoxContainer/MenuEntries" instance=ExtResource( 3 )]
-
-[node name="MoreInfo" type="Control" parent="."]
-margin_left = 1543.0
-margin_top = -7.0
-margin_right = 2928.0
-margin_bottom = 1491.0
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="README" type="RichTextLabel" parent="MoreInfo"]
-margin_right = 1729.0
-margin_bottom = 2011.0
-rect_scale = Vector2( 0.8, 0.8 )
-custom_fonts/italics_font = SubResource( 4 )
-custom_fonts/bold_font = SubResource( 5 )
-custom_fonts/normal_font = SubResource( 6 )
-bbcode_enabled = true
-bbcode_text = "Hi I'm [b]davcri[/b],
-I appreciate when people get in touch, it's a nice way to give support!
-Feel free to share your opinions, feedback and suggestions:
-
-- [b]Twitter[/b]: https://twitter.com/dav__cri
-- [b]Blog[/b]: https://davcri.github.io/
-- [b]email[/b]: davcri91@gmail.com
-- [b]Instagram[/b]: https://www.instagram.com/crystal_bit/
-
-This game was developed as part of the [b]Crystal Bit[/b] project:
-
-- [b]Github[/b]: https://github.com/crystal-bit
-- [b]YouTube [ITA-only][/b]: https://www.youtube.com/c/CrystalBit
-
-If you want to support me in other ways, you can buy me a coffee (I'm a coffee lover):
-
-- [b]Paypal[/b]: paypal.me/davcr1
-
-[i]My content will always be released under an open source license.[/i]"
-text = "Hi I'm davcri,
-I appreciate when people get in touch, it's a nice way to give support!
-Feel free to share your opinions, feedback and suggestions:
-
-- Twitter: https://twitter.com/dav__cri
-- Blog: https://davcri.github.io/
-- email: davcri91@gmail.com
-- Instagram: https://www.instagram.com/crystal_bit/
-
-This game was developed as part of the Crystal Bit project:
-
-- Github: https://github.com/crystal-bit
-- YouTube [ITA-only]: https://www.youtube.com/c/CrystalBit
-
-If you want to support me in other ways, you can buy me a coffee (I'm a coffee lover):
-
-- Paypal: paypal.me/davcr1
-
-My content will always be released under an open source license."
-scroll_active = false
-
-[node name="Logo" type="Sprite" parent="MoreInfo"]
-position = Vector2( 252, -274 )
-scale = Vector2( 0.820409, 0.820409 )
-texture = ExtResource( 7 )
