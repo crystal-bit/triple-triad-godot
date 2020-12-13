@@ -35,6 +35,8 @@ func _on_Field_match_ended():
 		GlobalState.matches_stats["lost"] += 1
 	elif match_result == DRAW:
 		GlobalState.matches_stats["drawn"] += 1
+		if GlobalState.current_rules["SuddenDeath"]:
+			return SceneManager.goto_scene("res://GameScenes/Game/Game.tscn", GlobalState.current_rules)
 	emit_signal("battle_ended", match_result)
 
 
