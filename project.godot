@@ -33,7 +33,7 @@ window/size/test_width=1024
 window/size/test_height=720
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
-window/2d/use_pixel_snap=false
+window/2d/use_pixel_snap=true
 
 [importer_defaults]
 
@@ -54,4 +54,7 @@ ui_cancel={
 
 [rendering]
 
+quality/driver/driver_name="GLES2"
+quality/intended_usage/framebuffer_allocation=0
+quality/intended_usage/framebuffer_allocation.mobile=0
 quality/2d/use_pixel_snap=true
