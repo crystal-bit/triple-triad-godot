@@ -26,6 +26,9 @@ region = Rect2( 256, 894, 249, 82 )
 [node name="SinglePlayerMenu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Background" type="CanvasLayer" parent="."]
 
@@ -85,8 +88,6 @@ margin_bottom = 133.0
 custom_icons/off = ExtResource( 1 )
 custom_icons/on = ExtResource( 2 )
 custom_fonts/font = SubResource( 3 )
-disabled = true
-pressed = true
 text = "Random"
 
 [node name="Open" type="CheckButton" parent="UI/MarginContainer/VBoxContainer/MarginContainer/Rules"]
@@ -105,7 +106,6 @@ margin_bottom = 265.0
 custom_icons/off = ExtResource( 1 )
 custom_icons/on = ExtResource( 2 )
 custom_fonts/font = SubResource( 3 )
-disabled = true
 text = "Sudden Death"
 
 [node name="Same" type="CheckButton" parent="UI/MarginContainer/VBoxContainer/MarginContainer/Rules"]
@@ -159,4 +159,3 @@ stretch_mode = 3
 script = ExtResource( 5 )
 
 [node name="MenuSelectionPointer" parent="UI/MarginContainer/VBoxContainer/MarginContainer/Rules" instance=ExtResource( 6 )]
-

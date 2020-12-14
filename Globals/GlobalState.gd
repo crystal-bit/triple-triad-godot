@@ -8,6 +8,7 @@ var matches_stats = {
 } setget set_matches_stats, get_matches_stats
 
 var current_rules = {}
+var starting_hand = []
 
 signal matches_stats_changed
 
